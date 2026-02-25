@@ -78,10 +78,6 @@
   revealEls.forEach(el => observer.observe(el));
 
   /* ---- Counter animation for hero stats ---- */
-  const stats = [
-    { el: null, end: 500, suffix: '+', duration: 1800 },
-    { el: null, end: 98, suffix: '%', duration: 1400 },
-  ];
   const statNumbers = document.querySelectorAll('.hero__stat-number');
   const animateCount = (el, end, suffix, duration) => {
     const start = performance.now();
@@ -95,8 +91,12 @@
   };
   const heroObserver = new IntersectionObserver(entries => {
     if (entries[0].isIntersecting) {
-      if (statNumbers[0]) animateCount(statNumbers[0], 500, '+', 1800);
-      if (statNumbers[1]) animateCount(statNumbers[1], 98, '%', 1400);
+      // First stat: 365/12 — non-numeric, leave as-is or reveal it
+      if (statNumbers[0]) statNumbers[0].textContent = '365/12';
+      // Second stat: 100% satisfaction
+      if (statNumbers[1]) animateCount(statNumbers[1], 100, '%', 1400);
+      // Third stat: +8 — leave as-is
+      if (statNumbers[2]) statNumbers[2].textContent = '+8';
       heroObserver.disconnect();
     }
   }, { threshold: 0.5 });
@@ -200,5 +200,5 @@
     card.setAttribute('tabindex', '0');
   });
 
-  console.log('🎯 AdMonitor MX — Cargado correctamente');
+  console.log('🎯 Publiser MX — Cargado correctamente');
 })();

@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AdMonitor MX | Estamos donde está tu marca</title>
-  <meta name="description" content="AdMonitor MX ofrece servicios profesionales de monitoreo publicitario exterior e interior, auditoría de imagen corporativa y POP Refresh en México. Maximiza tu inversión publicitaria." />
-  <meta name="keywords" content="monitoreo publicitario, monitoreo de punto de venta, auditoría imagen corporativa, publicidad exterior, vallas publicitarias, megapantallas, México, DOOH, POP Refresh" />
-  <meta property="og:title" content="AdMonitor MX | Estamos donde está tu marca" />
-  <meta property="og:description" content="Servicios de monitoreo publicitario que impulsan el éxito comercial de tus campañas en México." />
+  <title>Publiser MX | Estamos donde está tu marca</title>
+  <meta name="description"
+    content="Publiser MX ofrece servicios profesionales de monitoreo y auditoría de publicidad en punto de venta, publicidad exterior, interior y POP Refresh en México. Protege tu inversión publicitaria." />
+  <meta name="keywords"
+    content="monitoreo publicitario, monitoreo de punto de venta, auditoría imagen corporativa, publicidad exterior, vallas publicitarias, megapantallas, México, DOOH, POP Refresh, Publiser" />
+  <meta property="og:title" content="Publiser MX | Estamos donde está tu marca" />
+  <meta property="og:description"
+    content="Servicios de monitoreo y auditoría publicitaria que impulsan el éxito comercial de tus campañas en México." />
   <meta property="og:type" content="website" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="fonts/google-fonts.css" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="libs/lucide.min.js"></script>
 
   <!-- Google Analytics placeholder -->
   <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
@@ -23,6 +26,7 @@
     gtag('config', 'GA_MEASUREMENT_ID');
   </script> -->
 </head>
+
 <body>
 
   <!-- ========== HEADER / NAV ========== -->
@@ -30,20 +34,10 @@
     <div class="container header__inner">
       <a href="#inicio" class="logo">
         <div class="logo__icon">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="32" height="32" rx="8" fill="url(#grad-logo)"/>
-            <path d="M8 10h16M8 16h10M8 22h13" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-            <circle cx="24" cy="22" r="3.5" fill="white" opacity="0.9"/>
-            <defs>
-              <linearGradient id="grad-logo" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#0052CC"/>
-                <stop offset="1" stop-color="#FF6B00"/>
-              </linearGradient>
-            </defs>
-          </svg>
+          <img src="uploads/Logo.jpeg" alt="Publiser MX logo" class="logo__img" />
         </div>
         <div class="logo__text">
-          <span class="logo__name">AdMonitor<span class="logo__accent">MX</span></span>
+          <span class="logo__name">Publiser<span class="logo__accent">MX</span></span>
           <span class="logo__slogan">Estamos donde está tu marca</span>
         </div>
       </a>
@@ -67,120 +61,181 @@
   <section class="hero" id="inicio">
     <div class="hero__bg">
       <!-- SVG cityscape placeholder -->
-      <svg class="hero__cityscape" viewBox="0 0 1440 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <svg class="hero__cityscape" viewBox="0 0 1440 500" preserveAspectRatio="xMidYMid slice"
+        xmlns="http://www.w3.org/2000/svg">
         <!-- Buildings -->
-        <rect x="0" y="200" width="100" height="300" fill="#0a1628" opacity=".9"/>
-        <rect x="110" y="140" width="80" height="360" fill="#0d1f3c" opacity=".9"/>
-        <rect x="200" y="180" width="60" height="320" fill="#0a1628" opacity=".9"/>
-        <rect x="270" y="100" width="120" height="400" fill="#0d1f3c" opacity=".9"/>
-        <rect x="400" y="150" width="90" height="350" fill="#0a1628" opacity=".9"/>
-        <rect x="500" y="80" width="140" height="420" fill="#0d1f3c" opacity=".9"/>
-        <rect x="650" y="160" width="70" height="340" fill="#0a1628" opacity=".9"/>
-        <rect x="730" y="110" width="110" height="390" fill="#0d1f3c" opacity=".9"/>
-        <rect x="850" y="130" width="95" height="370" fill="#0a1628" opacity=".9"/>
-        <rect x="955" y="75" width="130" height="425" fill="#0d1f3c" opacity=".9"/>
-        <rect x="1095" y="170" width="80" height="330" fill="#0a1628" opacity=".9"/>
-        <rect x="1185" y="120" width="100" height="380" fill="#0d1f3c" opacity=".9"/>
-        <rect x="1295" y="155" width="85" height="345" fill="#0a1628" opacity=".9"/>
-        <rect x="1390" y="100" width="80" height="400" fill="#0d1f3c" opacity=".9"/>
+        <rect x="0" y="200" width="100" height="300" fill="#0a1628" opacity=".9" />
+        <rect x="110" y="140" width="80" height="360" fill="#0d1f3c" opacity=".9" />
+        <rect x="200" y="180" width="60" height="320" fill="#0a1628" opacity=".9" />
+        <rect x="270" y="100" width="120" height="400" fill="#0d1f3c" opacity=".9" />
+        <rect x="400" y="150" width="90" height="350" fill="#0a1628" opacity=".9" />
+        <rect x="500" y="80" width="140" height="420" fill="#0d1f3c" opacity=".9" />
+        <rect x="650" y="160" width="70" height="340" fill="#0a1628" opacity=".9" />
+        <rect x="730" y="110" width="110" height="390" fill="#0d1f3c" opacity=".9" />
+        <rect x="850" y="130" width="95" height="370" fill="#0a1628" opacity=".9" />
+        <rect x="955" y="75" width="130" height="425" fill="#0d1f3c" opacity=".9" />
+        <rect x="1095" y="170" width="80" height="330" fill="#0a1628" opacity=".9" />
+        <rect x="1185" y="120" width="100" height="380" fill="#0d1f3c" opacity=".9" />
+        <rect x="1295" y="155" width="85" height="345" fill="#0a1628" opacity=".9" />
+        <rect x="1390" y="100" width="80" height="400" fill="#0d1f3c" opacity=".9" />
         <!-- Billboard screens -->
-        <rect x="280" y="60" width="100" height="55" rx="4" fill="#FF6B00" opacity=".85"/>
-        <text x="330" y="93" font-size="10" fill="white" text-anchor="middle" font-family="sans-serif">TU MARCA AQUÍ</text>
-        <rect x="510" y="30" width="120" height="65" rx="4" fill="#0052CC" opacity=".85"/>
-        <text x="570" y="68" font-size="10" fill="white" text-anchor="middle" font-family="sans-serif">CAMPAÑA ACTIVA</text>
-        <rect x="960" y="25" width="110" height="60" rx="4" fill="#FF6B00" opacity=".85"/>
-        <text x="1015" y="60" font-size="10" fill="white" text-anchor="middle" font-family="sans-serif">MONITOREO 24/7</text>
+        <rect x="280" y="60" width="100" height="55" rx="4" fill="#FF6B00" opacity=".85" />
+        <text x="330" y="93" font-size="10" fill="white" text-anchor="middle" font-family="sans-serif">TU MARCA
+          AQUÃ</text>
+        <rect x="510" y="30" width="120" height="65" rx="4" fill="#0052CC" opacity=".85" />
+        <text x="570" y="68" font-size="10" fill="white" text-anchor="middle" font-family="sans-serif">CAMPAÃ‘A
+          ACTIVA</text>
+        <rect x="960" y="25" width="110" height="60" rx="4" fill="#FF6B00" opacity=".85" />
+        <text x="1015" y="60" font-size="10" fill="white" text-anchor="middle" font-family="sans-serif">MONITOREO
+          24/7</text>
         <!-- Street glow -->
-        <ellipse cx="720" cy="480" rx="700" ry="60" fill="#FF6B00" opacity=".08"/>
-        <ellipse cx="720" cy="490" rx="500" ry="40" fill="#0052CC" opacity=".1"/>
+        <ellipse cx="720" cy="480" rx="700" ry="60" fill="#FF6B00" opacity=".08" />
+        <ellipse cx="720" cy="490" rx="500" ry="40" fill="#0052CC" opacity=".1" />
       </svg>
       <div class="hero__overlay"></div>
     </div>
 
     <div class="container hero__content">
-      <div class="hero__badge">🎯 Monitoreo Publicitario Profesional en México</div>
+      <div class="hero__badge">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 8v4l3 3" />
+        </svg>
+        Monitoreo Publicitario Profesional en México
+      </div>
       <h1 class="hero__title">
-        Tu campaña merece<br/>
+        Tu campaña merece<br />
         <span class="hero__title--accent">estar siempre encendida</span>
       </h1>
       <p class="hero__subtitle">
-        Garantizamos que tu publicidad exterior, digital y en punto de venta esté activa, visible y en condiciones óptimas — con evidencia fotográfica, geolocalización y reportes proactivos en tiempo real.
+        Garantizamos que tu publicidad exterior, digital y en punto de venta esté activa, visible y en condiciones
+        óptimas con evidencia fotográfica, geolocalización y reportes proactivos en tiempo real.
       </p>
       <div class="hero__cta">
         <a href="#contacto" class="btn btn--primary btn--lg">Agenda una Demostración</a>
         <a href="#servicios" class="btn btn--ghost btn--lg">Ver Servicios</a>
       </div>
       <div class="hero__stats">
-        <div class="hero__stat"><span class="hero__stat-number">+500</span><span class="hero__stat-label">Campañas Monitoreadas</span></div>
+        <div class="hero__stat"><span class="hero__stat-number">365/12</span><span class="hero__stat-label">Monitoreo
+            Continuo</span></div>
         <div class="hero__stat-divider"></div>
-        <div class="hero__stat"><span class="hero__stat-number">98%</span><span class="hero__stat-label">Satisfacción del Cliente</span></div>
+        <div class="hero__stat"><span class="hero__stat-number">100%</span><span class="hero__stat-label">Satisfacción
+            al Cliente</span></div>
         <div class="hero__stat-divider"></div>
-        <div class="hero__stat"><span class="hero__stat-number">24/7</span><span class="hero__stat-label">Monitoreo Continuo</span></div>
+        <div class="hero__stat"><span class="hero__stat-number">+8</span><span class="hero__stat-label">Años de
+            Experiencia</span></div>
       </div>
     </div>
 
     <div class="hero__scroll-hint">
       <span>Descubre más</span>
-      <div class="hero__scroll-icon"><div class="hero__scroll-dot"></div></div>
+      <div class="hero__scroll-icon">
+        <div class="hero__scroll-dot"></div>
+      </div>
     </div>
   </section>
 
-  <!-- ========== QUIÉNES SOMOS ========== -->
+  <!-- ========== QUIÃ‰NES SOMOS ========== -->
   <section class="section quienes" id="quienes">
     <div class="container">
+
+      <!-- Intro text block -->
+      <div class="quienes__intro">
+        <div class="section__label">Quiénes Somos</div>
+        <h2 class="section__title">Expertos en hacer visible tu inversión publicitaria</h2>
+        <p class="quienes__intro-text">Somos una empresa especializada en monitoreo y auditoría de publicidad en punto
+          de venta con más de 8 años de experiencia, ayudando a marcas a proteger su inversión mediante una correcta
+          ejecución y visualización de sus campañas publicitarias.</p>
+      </div>
+
+      <!-- Two-column: image + M/V -->
       <div class="quienes__grid">
 
         <div class="quienes__image-col">
-          <!-- Image placeholder: team working -->
           <div class="img-placeholder img-placeholder--team">
-            <div class="img-placeholder__inner">
-              <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="36" cy="28" r="14" stroke="rgba(255,255,255,0.5)" stroke-width="2.5"/>
-                <path d="M12 60c0-13.255 10.745-24 24-24s24 10.745 24 24" stroke="rgba(255,255,255,0.5)" stroke-width="2.5" stroke-linecap="round"/>
-                <circle cx="56" cy="30" r="9" stroke="rgba(255,255,255,0.35)" stroke-width="2"/>
-                <path d="M44 56c0-8 5.373-14.5 12-14.5" stroke="rgba(255,255,255,0.35)" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-              <span>Equipo de trabajo</span>
-            </div>
-          </div>
-          <div class="quienes__card-float">
-            <div class="quienes__card-float-icon">🏆</div>
-            <div>
-              <strong>+10 años</strong>
-              <span>en la industria</span>
-            </div>
+            <img src="uploads/Exterior_AICM.jpeg" alt="Monitoreo publicitario exterior AICM"
+              class="quienes__real-img" />
           </div>
         </div>
 
         <div class="quienes__text-col">
-          <div class="section__label">Quiénes Somos</div>
-          <h2 class="section__title">Expertos en hacer visible tu inversión publicitaria</h2>
-
           <div class="mv-grid">
             <div class="mv-card mv-card--mission">
-              <div class="mv-card__icon">🎯</div>
+              <div class="mv-card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 8v4l3 3" />
+                </svg>
+              </div>
               <h3>Misión</h3>
-              <p>Proporcionar servicios de monitoreo publicitario de excelencia que impulsen el éxito comercial de nuestros clientes, garantizando la veracidad y efectividad de cada campaña con tecnología, profesionalismo y compromiso total.</p>
+              <p>Proporcionar servicios de monitoreo publicitario de excelencia que impulsen el éxito comercial de
+                nuestros clientes, garantizando la veracidad y efectividad de cada campaña con tecnología,
+                profesionalismo y compromiso total.</p>
             </div>
             <div class="mv-card mv-card--vision">
-              <div class="mv-card__icon">🔭</div>
+              <div class="mv-card__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m2 13 5.1 5.1a2 2 0 0 0 2.8 0L21 7" />
+                  <path d="M22 2 11 13" />
+                </svg>
+              </div>
               <h3>Visión</h3>
-              <p>Ser la empresa líder en monitoreo de punto de venta en México, reconocida por nuestra innovación, confiabilidad y el impacto tangible que generamos en las estrategias publicitarias de nuestros clientes.</p>
-            </div>
-          </div>
-
-          <div class="valores">
-            <h3 class="valores__title">Nuestros Valores</h3>
-            <div class="valores__grid">
-              <div class="valor-chip"><span>✅</span> Calidad</div>
-              <div class="valor-chip"><span>🤝</span> Compromiso</div>
-              <div class="valor-chip"><span>💡</span> Innovación</div>
-              <div class="valor-chip"><span>🔍</span> Transparencia</div>
+              <p>Ser la empresa líder en monitoreo de punto de venta en México, reconocida por nuestra innovación y
+                confiabilidad para nuestros clientes.</p>
             </div>
           </div>
         </div>
 
       </div>
+
+      <!-- Valores full-width banner -->
+      <div class="valores-banner">
+        <div class="valores-banner__inner">
+          <div class="valores-banner__col">
+            <div class="valores-banner__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+              </svg>
+            </div>
+            <h4>Valores</h4>
+            <p>Calidad, compromiso, innovación y transparencia en cada servicio.</p>
+          </div>
+          <div class="valores-banner__divider"></div>
+          <div class="valores-banner__col">
+            <div class="valores-banner__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m2 13 5.1 5.1a2 2 0 0 0 2.8 0L21 7" />
+                <path d="M22 2 11 13" />
+              </svg>
+            </div>
+            <h4>Visión</h4>
+            <p>Ser la empresa líder en monitoreo de punto de venta en México, reconocida por nuestra innovación y
+              confiabilidad para nuestros clientes.</p>
+          </div>
+          <div class="valores-banner__divider"></div>
+          <div class="valores-banner__col">
+            <div class="valores-banner__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 8v4l3 3" />
+              </svg>
+            </div>
+            <h4>Misión</h4>
+            <p>Proporcionar servicios de monitoreo publicitario de excelencia que impulsen el éxito comercial de
+              nuestros clientes, garantizando la veracidad y efectividad de cada campaña con tecnología,
+              profesionalismo
+              y compromiso total.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -190,7 +245,8 @@
       <div class="section__header">
         <div class="section__label">Lo que hacemos</div>
         <h2 class="section__title">Nuestros Servicios de Monitoreo Publicitario</h2>
-        <p class="section__subtitle">Soluciones integrales para garantizar que cada peso de tu inversión publicitaria cuente.</p>
+        <p class="section__subtitle">Soluciones integrales para garantizar que cada peso de tu inversión publicitaria
+          cuente.</p>
       </div>
 
       <div class="servicios__grid">
@@ -198,23 +254,22 @@
         <!-- Servicio 1 -->
         <div class="servicio-card" data-aos="fade-up" data-delay="0">
           <div class="servicio-card__icon-wrap servicio-card__icon-wrap--blue">
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-              <rect x="3" y="6" width="30" height="18" rx="3" stroke="white" stroke-width="2"/>
-              <path d="M12 30h12M18 24v6" stroke="white" stroke-width="2" stroke-linecap="round"/>
-              <rect x="8" y="10" width="20" height="10" rx="1.5" fill="white" opacity=".3"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" />
+              <path d="M8 21h8M12 17v4" />
             </svg>
           </div>
-          <div class="servicio-card__img-placeholder">
-            <div class="servicio-card__img-inner">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="4" y="8" width="40" height="24" rx="4" stroke="rgba(255,255,255,0.4)" stroke-width="2"/><path d="M16 40h16M24 32v8" stroke="rgba(255,255,255,0.4)" stroke-width="2" stroke-linecap="round"/></svg>
-              <span>Vallas y Pantallas Digitales</span>
-            </div>
+          <div class="servicio-card__img-real">
+            <img src="uploads/Expectacular_Exterior.jpeg" alt="Vallas publicitarias OOH monitoreo" />
+            <span class="servicio-card__img-label">OOH &amp; DOOH</span>
           </div>
-          <h3 class="servicio-card__title">Monitoreo de Publicidad Exterior y Digital</h3>
-          <p class="servicio-card__desc">Supervisión continua de vallas, megapantallas y publicidad exterior en toda la república. Garantizamos que tu anuncio esté donde debe estar, encendido y en perfecto estado.</p>
+          <h3 class="servicio-card__title">Monitoreo de Publicidad Exterior y Digital (OOH y DOOH)</h3>
+          <p class="servicio-card__desc">Ayudamos a que tu publicidad exterior y digital esté activa, visible
+            y en condiciones óptimas con evidencia verificable en cada punto de exposición.</p>
           <ul class="servicio-card__benefits">
             <li><span class="check">✓</span> Reportes detallados con fecha y hora</li>
-            <li><span class="check">✓</span> Evidencia fotográfica con geolocalización</li>
+            <li><span class="check">✓</span> Evidencia fotográfica y video con geolocalización</li>
             <li><span class="check">✓</span> Control de calidad visual 24/7</li>
           </ul>
           <a href="#contacto" class="btn btn--service">Solicita una Demo →</a>
@@ -223,20 +278,20 @@
         <!-- Servicio 2 -->
         <div class="servicio-card" data-aos="fade-up" data-delay="100">
           <div class="servicio-card__icon-wrap servicio-card__icon-wrap--orange">
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-              <rect x="6" y="4" width="24" height="28" rx="3" stroke="white" stroke-width="2"/>
-              <rect x="10" y="8" width="16" height="10" rx="1" fill="white" opacity=".3"/>
-              <circle cx="18" cy="26" r="2" fill="white" opacity=".6"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="2" width="14" height="20" rx="2" />
+              <path d="M12 18h.01" />
             </svg>
           </div>
-          <div class="servicio-card__img-placeholder servicio-card__img-placeholder--orange">
-            <div class="servicio-card__img-inner">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="8" y="4" width="32" height="40" rx="4" stroke="rgba(255,255,255,0.4)" stroke-width="2"/><rect x="13" y="9" width="22" height="14" rx="2" fill="rgba(255,255,255,0.2)"/><circle cx="24" cy="35" r="3" fill="rgba(255,255,255,0.4)"/></svg>
-              <span>PDV Interior Digital</span>
-            </div>
+          <div class="servicio-card__img-real">
+            <img src="uploads/Interior.jpeg" alt="Pantalla digital interior restaurante" />
+            <span class="servicio-card__img-label">Indoor Digital</span>
           </div>
-          <h3 class="servicio-card__title">Monitoreo de Publicidad Interior y Digital en PDV</h3>
-          <p class="servicio-card__desc">Verificación de pantallas LED/LCD en restaurantes, bancos, cines y centros comerciales. Aseguramos que tu contenido digital esté vigente y en condiciones técnicas óptimas.</p>
+          <h3 class="servicio-card__title">Monitoreo de Publicidad Digital Interior y Digital en PDV (Indoor Digital)
+          </h3>
+          <p class="servicio-card__desc">Verificación de pantallas LED/LCD en restaurantes, bancos, cines y centros
+            comerciales. Ayudamos a que tu contenido digital esté vigente y en condiciones técnicas óptimas.</p>
           <ul class="servicio-card__benefits">
             <li><span class="check">✓</span> Verificación de contenido correcto</li>
             <li><span class="check">✓</span> Control de vigencia de campañas</li>
@@ -248,23 +303,24 @@
         <!-- Servicio 3 -->
         <div class="servicio-card" data-aos="fade-up" data-delay="200">
           <div class="servicio-card__icon-wrap servicio-card__icon-wrap--teal">
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-              <circle cx="18" cy="12" r="6" stroke="white" stroke-width="2"/>
-              <path d="M8 30c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="white" stroke-width="2" stroke-linecap="round"/>
-              <path d="M24 6l2 2-6 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
             </svg>
           </div>
-          <div class="servicio-card__img-placeholder servicio-card__img-placeholder--teal">
-            <div class="servicio-card__img-inner">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="18" r="9" stroke="rgba(255,255,255,0.4)" stroke-width="2"/><path d="M10 42c0-7.732 6.268-14 14-14s14 6.268 14 14" stroke="rgba(255,255,255,0.4)" stroke-width="2" stroke-linecap="round"/></svg>
-              <span>Auditoría de Personal e Imagen</span>
-            </div>
+          <div class="servicio-card__img-real">
+            <img src="uploads/Auditoria.jpeg" alt="Auditoría imagen corporativa Elektra Banco Azteca" />
+            <span class="servicio-card__img-label">Auditoría</span>
           </div>
           <h3 class="servicio-card__title">Auditoría de Imagen Corporativa</h3>
-          <p class="servicio-card__desc">Verificación de estándares de imagen del personal, calidad en atención al cliente y condiciones del establecimiento para garantizar una experiencia de marca consistente.</p>
+          <p class="servicio-card__desc">Verificación de estándares de imagen del personal, calidad en atención al
+            cliente y condiciones del establecimiento para garantizar una experiencia de marca consistente.</p>
           <ul class="servicio-card__benefits">
             <li><span class="check">✓</span> Evaluación de imagen del personal</li>
-            <li><span class="check">✓</span> Auditoria de atención al cliente</li>
+            <li><span class="check">✓</span> Auditoría de atención al cliente</li>
             <li><span class="check">✓</span> Revisión de condiciones del local</li>
           </ul>
           <a href="#contacto" class="btn btn--service">Solicita una Demo →</a>
@@ -273,40 +329,31 @@
         <!-- Servicio 4 -->
         <div class="servicio-card" data-aos="fade-up" data-delay="300">
           <div class="servicio-card__icon-wrap servicio-card__icon-wrap--purple">
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-              <rect x="4" y="14" width="10" height="16" rx="2" stroke="white" stroke-width="2"/>
-              <rect x="13" y="8" width="10" height="22" rx="2" stroke="white" stroke-width="2"/>
-              <rect x="22" y="4" width="10" height="26" rx="2" stroke="white" stroke-width="2"/>
-              <path d="M5 14L18 6l13-2" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity=".5"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
+              <line x1="7" y1="7" x2="7.01" y2="7" />
             </svg>
           </div>
-          <div class="servicio-card__img-placeholder servicio-card__img-placeholder--purple">
-            <div class="servicio-card__img-inner">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="6" y="20" width="12" height="22" rx="2" stroke="rgba(255,255,255,0.4)" stroke-width="2"/><rect x="18" y="12" width="12" height="30" rx="2" stroke="rgba(255,255,255,0.4)" stroke-width="2"/><rect x="30" y="6" width="12" height="36" rx="2" stroke="rgba(255,255,255,0.4)" stroke-width="2"/></svg>
-              <span>Material POP en PDV</span>
-            </div>
+          <div class="servicio-card__img-real">
+            <img src="uploads/Pop_Reresh2.jpeg" alt="Material POP Refresh en punto de venta Elektra" />
+            <span class="servicio-card__img-label">POP Refresh</span>
           </div>
           <h3 class="servicio-card__title">POP Refresh</h3>
-          <p class="servicio-card__desc">Gestión, reposición y actualización de material publicitario en puntos de venta: flyers, banners, cenefas, stoppers y más. Tu punto de venta siempre impactante y actualizado.</p>
+          <p class="servicio-card__desc">Gestión, reposición y actualización de material publicitario en puntos de
+            venta: flyers, banners, cenefas, stoppers y más. Tu punto de venta siempre impactante y actualizado.</p>
           <ul class="servicio-card__benefits">
-            <li><span class="check">✓</span> Gestión de material POP</li>
-            <li><span class="check">✓</span> Reposición y actualización de materiales</li>
-            <li><span class="check">✓</span> Cobertura nacional en PDV</li>
-          </ul>
-          <a href="#contacto" class="btn btn--service">Solicita una Demo →</a>
         </div>
-
-      </div>
-    </div>
   </section>
 
-  <!-- ========== CASOS DE ÉXITO ========== -->
+  <!-- ========== CASOS DE Ã‰XITO ========== -->
   <section class="section casos" id="casos">
     <div class="container">
       <div class="section__header">
         <div class="section__label">Resultados reales</div>
         <h2 class="section__title">Clientes y Casos de Éxito</h2>
-        <p class="section__subtitle">Marcas líderes que confían en nosotros para cuidar su presencia en el mercado mexicano.</p>
+        <p class="section__subtitle">Marcas líderes que confían en nosotros para cuidar su presencia en el mercado
+          mexicano.</p>
       </div>
 
       <!-- Client logos -->
@@ -314,21 +361,25 @@
         <div class="clientes-logos__track">
           <div class="cliente-logo">Banco Azteca</div>
           <div class="cliente-logo">Elektra</div>
+          <div class="cliente-logo">Cinemex</div>
+          <div class="cliente-logo">AICM</div>
+          <div class="cliente-logo">Casa de Toño</div>
           <div class="cliente-logo">Chedraui</div>
-          <div class="cliente-logo">Telcel</div>
-          <div class="cliente-logo">OXXO</div>
-          <div class="cliente-logo">Cinépolis</div>
-          <div class="cliente-logo">Walmart</div>
-          <div class="cliente-logo">Soriana</div>
+          <div class="cliente-logo">Neto</div>
+          <div class="cliente-logo">Forum Buenavista</div>
+          <div class="cliente-logo">UVM</div>
+          <div class="cliente-logo">Global</div>
           <!-- duplicated for infinite scroll -->
           <div class="cliente-logo">Banco Azteca</div>
           <div class="cliente-logo">Elektra</div>
+          <div class="cliente-logo">Cinemex</div>
+          <div class="cliente-logo">AICM</div>
+          <div class="cliente-logo">Casa de Toño</div>
           <div class="cliente-logo">Chedraui</div>
-          <div class="cliente-logo">Telcel</div>
-          <div class="cliente-logo">OXXO</div>
-          <div class="cliente-logo">Cinépolis</div>
-          <div class="cliente-logo">Walmart</div>
-          <div class="cliente-logo">Soriana</div>
+          <div class="cliente-logo">Neto</div>
+          <div class="cliente-logo">Forum Buenavista</div>
+          <div class="cliente-logo">UVM</div>
+          <div class="cliente-logo">Global</div>
         </div>
       </div>
 
@@ -336,65 +387,70 @@
       <div class="testimonials">
         <div class="testimonial-card">
           <div class="testimonial-card__stars">★★★★★</div>
-          <p class="testimonial-card__quote">"Desde que contratamos a AdMonitor MX, tenemos la tranquilidad de saber que cada valla y pantalla digital está encendida y mostrando el contenido correcto. Los reportes proactivos nos han ahorrado miles de pesos en campañas perdidas."</p>
+          <p class="testimonial-card__quote">"¡El equipo Publiser es profesional y siempre está disponible para el
+            servicio urgente, además los entregables son con calidad y prontitud."</p>
           <div class="testimonial-card__author">
-            <div class="testimonial-card__avatar">MA</div>
+            <div class="testimonial-card__avatar">PR</div>
             <div>
-              <strong>María Acosta</strong>
-              <span>Directora de Marketing · Banco Azteca</span>
+              <strong>Paola Romero</strong>
+              <span>Cliente Publiser MX</span>
             </div>
           </div>
         </div>
         <div class="testimonial-card">
           <div class="testimonial-card__stars">★★★★★</div>
-          <p class="testimonial-card__quote">"El nivel de detalle en sus reportes es impresionante. Evidencia fotográfica con geolocalización y timestamp en cada punto de venta. Es exactamente lo que necesitábamos para validar nuestra inversión publicitaria."</p>
+          <p class="testimonial-card__quote">"Notamos satisfacción en el área comercial desde que Publiser está
+            supervisando nuestras campañas, los testigos fotográficos son excelentes. ¡Altamente recomendados!"</p>
           <div class="testimonial-card__author">
-            <div class="testimonial-card__avatar">CR</div>
+            <div class="testimonial-card__avatar">VM</div>
             <div>
-              <strong>Carlos Ramírez</strong>
-              <span>Gerente de Operaciones · Elektra</span>
+              <strong>Victor Morones</strong>
+              <span>Cliente Publiser MX</span>
             </div>
           </div>
         </div>
         <div class="testimonial-card">
           <div class="testimonial-card__stars">★★★★★</div>
-          <p class="testimonial-card__quote">"Su equipo detectó y corrigió incidencias en nuestra campaña nacional en cuestión de horas. Esa velocidad de respuesta es invaluable. Definitivamente la mejor agencia de monitoreo con la que hemos trabajado."</p>
+          <p class="testimonial-card__quote">"El equipo Publiser ha sido versátil, dinámico para dar solución a
+            incidencias en el punto de venta, se logran corregir fallas por la experiencia y paciencia de los
+            supervisores, su experiencia en la fotografía y video ha sido fundamental para ayudar a otros proveedores."
+          </p>
           <div class="testimonial-card__author">
-            <div class="testimonial-card__avatar">LP</div>
+            <div class="testimonial-card__avatar">DE</div>
             <div>
-              <strong>Laura Pérez</strong>
-              <span>VP de Marca · Chedraui</span>
+              <strong>Deneken Enciso</strong>
+              <span>Cliente Publiser MX</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Project Gallery placeholder -->
+      <!-- Project Gallery -->
       <div class="gallery">
         <h3 class="gallery__title">Galería de Proyectos</h3>
         <div class="gallery__grid">
           <div class="gallery__item gallery__item--large">
-            <div class="gallery__img-placeholder">
-              <svg width="56" height="56" viewBox="0 0 56 56" fill="none"><rect x="4" y="8" width="48" height="32" rx="4" stroke="rgba(255,255,255,0.4)" stroke-width="2"/><circle cx="18" cy="24" r="6" stroke="rgba(255,255,255,0.4)" stroke-width="2"/><path d="M4 35l14-10 10 8 8-6 16 13" stroke="rgba(255,255,255,0.4)" stroke-width="2" stroke-linejoin="round"/></svg>
-              <span>Campaña Vallas Exteriores</span>
+            <div class="gallery__img-real">
+              <img src="uploads/Exterior_AICM.jpeg" alt="Valla exterior AICM Liverpool" />
+              <div class="gallery__img-overlay"><span>Vallas â€” AICM Exterior</span></div>
             </div>
           </div>
           <div class="gallery__item">
-            <div class="gallery__img-placeholder gallery__img-placeholder--2">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="6" width="32" height="22" rx="3" stroke="rgba(255,255,255,0.4)" stroke-width="2"/><path d="M4 24l7-7 6 6 5-4 10 8" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-linejoin="round"/><path d="M13 34h14M20 28v6" stroke="rgba(255,255,255,0.4)" stroke-width="2" stroke-linecap="round"/></svg>
-              <span>Pantallas Digitales PDV</span>
+            <div class="gallery__img-real">
+              <img src="uploads/Neto_Interior.jpeg" alt="Pantalla digital interior Neto" />
+              <div class="gallery__img-overlay"><span>Interior â€” Neto</span></div>
             </div>
           </div>
           <div class="gallery__item">
-            <div class="gallery__img-placeholder gallery__img-placeholder--3">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="15" r="8" stroke="rgba(255,255,255,0.4)" stroke-width="2"/><path d="M6 36c0-7.732 6.268-14 14-14s14 6.268 14 14" stroke="rgba(255,255,255,0.4)" stroke-width="2" stroke-linecap="round"/></svg>
-              <span>Auditoría de Imagen</span>
+            <div class="gallery__img-real">
+              <img src="uploads/Auditoria.jpeg" alt="Auditoría imagen corporativa" />
+              <div class="gallery__img-overlay"><span>Auditoría</span></div>
             </div>
           </div>
           <div class="gallery__item">
-            <div class="gallery__img-placeholder gallery__img-placeholder--4">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="18" width="8" height="16" rx="2" stroke="rgba(255,255,255,0.4)" stroke-width="2"/><rect x="16" y="10" width="8" height="24" rx="2" stroke="rgba(255,255,255,0.4)" stroke-width="2"/><rect x="28" y="4" width="8" height="30" rx="2" stroke="rgba(255,255,255,0.4)" stroke-width="2"/></svg>
-              <span>Reporte POP Refresh</span>
+            <div class="gallery__img-real">
+              <img src="uploads/Pop_Refresh.jpeg" alt="POP Refresh material publicitario PDV" />
+              <div class="gallery__img-overlay"><span>POP Refresh</span></div>
             </div>
           </div>
         </div>
@@ -403,22 +459,30 @@
     </div>
   </section>
 
-  <!-- ========== POR QUÉ ELEGIRNOS ========== -->
+  <!-- ========== POR QUÃ‰ ELEGIRNOS ========== -->
   <section class="section por-que" id="porque">
     <div class="container">
       <div class="section__header">
         <div class="section__label">Ventaja competitiva</div>
-        <h2 class="section__title">Maximiza tu inversión publicitaria con nosotros</h2>
-        <p class="section__subtitle">Cuatro pilares que hacen la diferencia en cada campaña que supervisamos.</p>
+        <h2 class="section__title">¿Por qué elegir Publiser MX?</h2>
+        <p class="section__subtitle">Los pilares que hacen la diferencia en cada campaña que supervisamos.</p>
       </div>
 
-      <div class="por-que__grid">
+      <div class="por-que__grid por-que__grid--6">
 
         <div class="beneficio-card beneficio-card--1">
           <div class="beneficio-card__number">01</div>
-          <div class="beneficio-card__icon">📍</div>
+          <div class="beneficio-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+          </div>
           <h3>Veracidad de la Exposición</h3>
-          <p>Garantizamos campañas verídicas y confiables con fecha, hora exacta, testigos fotográficos y geolocalización precisa en cada punto de contacto.</p>
+          <p>Aseguramos que tus campañas sean confiables y verídicas, con registro de fecha/hora, testigo en fachadas,
+            geolocalización y monitoreo inicial, medio y final.
+          </p>
           <div class="beneficio-card__tags">
             <span>Timestamp</span><span>GPS</span><span>Foto-evidencia</span>
           </div>
@@ -426,79 +490,371 @@
 
         <div class="beneficio-card beneficio-card--2">
           <div class="beneficio-card__number">02</div>
-          <div class="beneficio-card__icon">⚡</div>
-          <h3>Reportes Proactivos</h3>
-          <p>Detectamos y reportamos incidencias en tus campañas mientras aún están activas, permitiendo correcciones inmediatas que protegen tu inversión.</p>
+          <div class="beneficio-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+          </div>
+          <h3>Calidad en tu Servicio</h3>
+          <p>Nos adaptamos a requerimientos exhaustivos, entregamos en tiempo récord y actualizamos dispositivos
+            para testigos fotográficos eficientes.</p>
           <div class="beneficio-card__tags">
-            <span>Tiempo real</span><span>Alertas</span><span>Corrección rápida</span>
+            <span>Tiempo récord</span><span>Adaptabilidad</span><span>Alta calidad</span>
           </div>
         </div>
 
         <div class="beneficio-card beneficio-card--3">
           <div class="beneficio-card__number">03</div>
-          <div class="beneficio-card__icon">💰</div>
-          <h3>Precios Competitivos</h3>
-          <p>Ofrecemos el mejor equilibrio costo-beneficio con ajustes dinámicos por proyecto. Tu inversión en monitoreo se paga sola con las campañas que salvamos.</p>
+          <div class="beneficio-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+            </svg>
+          </div>
+          <h3>Reportes Proactivos</h3>
+          <p>Coadyuvamos a reportar y corregir incidencias en tus campañas mientras están activas, adaptándonos
+            para dar solución a la brevedad posible.</p>
           <div class="beneficio-card__tags">
-            <span>Sin mensualidades</span><span>Por proyecto</span><span>ROI garantizado</span>
+            <span>Tiempo real</span><span>Alertas</span><span>Corrección rápida</span>
           </div>
         </div>
 
         <div class="beneficio-card beneficio-card--4">
           <div class="beneficio-card__number">04</div>
-          <div class="beneficio-card__icon">🎓</div>
-          <h3>Capacitación Continua</h3>
-          <p>Nuestros supervisores reciben coaching permanente en liderazgo, comunicación efectiva y tecnología para garantizar un servicio siempre de primer nivel.</p>
+          <div class="beneficio-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="1" x2="12" y2="23" />
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+            </svg>
+          </div>
+          <h3>Precios Competitivos</h3>
+          <p>Ofrecemos equilibrio costo-beneficio superior, con ajustes dinámicos por proyecto garantizando
+            siempre la calidad.</p>
           <div class="beneficio-card__tags">
-            <span>Liderazgo</span><span>Tecnología</span><span>Excelencia</span>
+            <span>Sin mensualidades</span><span>Por proyecto</span><span>ROI garantizado</span>
+          </div>
+        </div>
+
+        <div class="beneficio-card beneficio-card--1">
+          <div class="beneficio-card__number">05</div>
+          <div class="beneficio-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+              <path d="M6 12v5c3 3 9 3 12 0v-5" />
+            </svg>
+          </div>
+          <h3>Capacitación Continua</h3>
+          <p>Coaching permanente a supervisores en liderazgo, comunicación efectiva, gestión de conflictos
+            y dominio tecnológico al 100%.</p>
+          <div class="beneficio-card__tags">
+            <span>Liderazgo</span><span>Comunicación</span><span>Tecnología</span>
+          </div>
+        </div>
+
+        <div class="beneficio-card beneficio-card--2">
+          <div class="beneficio-card__number">06</div>
+          <div class="beneficio-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="6" />
+              <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+            </svg>
+          </div>
+          <h3>Certificación</h3>
+          <p>Verificación puntual y confiable, alineada a los lineamientos pactados (SLA).
+            Empresa avalada por Certificación Integral de Empresas.</p>
+          <div class="beneficio-card__tags">
+            <span>SLA</span><span>Avalada</span><span>Certificada</span>
           </div>
         </div>
 
       </div>
 
-      <!-- Infographic / comparison table -->
-      <div class="comparativa">
-        <h3 class="comparativa__title">¿Por qué AdMonitor MX vs. la competencia?</h3>
-        <div class="tabla-wrapper">
-          <table class="tabla-comparativa">
-            <thead>
-              <tr>
-                <th>Característica</th>
-                <th class="tabla-highlight">AdMonitor MX</th>
-                <th>Competencia típica</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Evidencia fotográfica con GPS</td>
-                <td class="tabla-highlight"><span class="check-green">✓</span> Incluido</td>
-                <td><span class="check-red">✗</span> Opcional</td>
-              </tr>
-              <tr>
-                <td>Reportes proactivos (sin esperar)</td>
-                <td class="tabla-highlight"><span class="check-green">✓</span> 24 hrs</td>
-                <td><span class="check-red">✗</span> Al cierre de campaña</td>
-              </tr>
-              <tr>
-                <td>Cobertura nacional</td>
-                <td class="tabla-highlight"><span class="check-green">✓</span> Todo México</td>
-                <td><span class="check-yellow">~</span> Ciudades principales</td>
-              </tr>
-              <tr>
-                <td>Dashboard en línea</td>
-                <td class="tabla-highlight"><span class="check-green">✓</span> Tiempo real</td>
-                <td><span class="check-red">✗</span> No disponible</td>
-              </tr>
-              <tr>
-                <td>Ajuste de precios por volumen</td>
-                <td class="tabla-highlight"><span class="check-green">✓</span> Dinámico</td>
-                <td><span class="check-yellow">~</span> Tarifa fija</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+    </div>
+  </section>
+
+  <!-- ========== COBERTURA OPERARIA ========== -->
+  <section class="section cobertura" id="cobertura">
+    <div class="container">
+      <div class="section__header">
+        <div class="section__label">Operaciones</div>
+        <h2 class="section__title">Cobertura Operaria Diaria<br />Ciudad de México</h2>
+        <p class="section__subtitle">Supervisores activos diariamente en toda la CDMX y área metropolitana,
+          garantizando
+          presencia en cada punto de venta.</p>
       </div>
 
+      <div class="cobertura__grid">
+        <div class="cobertura__map">
+          <div class="cobertura__map-svg-wrap">
+            <!-- Accurate CDMX AlcaldÃ­as SVG Map -->
+            <svg viewBox="0 0 340 380" fill="none" xmlns="http://www.w3.org/2000/svg" class="cdmx-map"
+              aria-label="Mapa CDMX cobertura">
+              <defs>
+                <filter id="glow-blue">
+                  <feGaussianBlur stdDeviation="3" result="coloredBlur" />
+                  <feMerge>
+                    <feMergeNode in="coloredBlur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+                <filter id="glow-orange">
+                  <feGaussianBlur stdDeviation="2.5" result="coloredBlur" />
+                  <feMerge>
+                    <feMergeNode in="coloredBlur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+
+              <!-- â”€â”€ AZCAPOTZALCO (NW) â”€â”€ -->
+              <polygon points="60,30 110,25 115,60 80,75 55,65" class="alcaldia alcaldia--covered"
+                data-name="Azcapotzalco" />
+              <!-- â”€â”€ GUSTAVO A. MADERO (N) â”€â”€ -->
+              <polygon points="110,25 185,20 195,30 190,70 150,75 115,60" class="alcaldia alcaldia--covered"
+                data-name="Gustavo A. Madero" />
+              <!-- â”€â”€ VENUSTIANO CARRANZA (NE) â”€â”€ -->
+              <polygon points="185,20 230,30 235,70 195,75 190,70 195,30" class="alcaldia alcaldia--covered"
+                data-name="Venustiano Carranza" />
+              <!-- â”€â”€ MIGUEL HIDALGO (W-center) â”€â”€ -->
+              <polygon points="55,65 80,75 85,110 70,130 45,120 40,90" class="alcaldia alcaldia--covered"
+                data-name="Miguel Hidalgo" />
+              <!-- â”€â”€ CUAUHTÃ‰MOC (center) â”€â”€ -->
+              <polygon points="80,75 115,60 150,75 155,115 120,125 85,110" class="alcaldia alcaldia--highlight"
+                data-name="Cuauhtémoc" />
+              <!-- â”€â”€ IZTACALCO (E-center) â”€â”€ -->
+              <polygon points="150,75 190,70 200,110 165,125 155,115" class="alcaldia alcaldia--covered"
+                data-name="Iztacalco" />
+              <!-- â”€â”€ IZTAPALAPA (E) â”€â”€ -->
+              <polygon points="190,70 235,70 240,130 215,160 180,165 165,125 200,110" class="alcaldia alcaldia--covered"
+                data-name="Iztapalapa" />
+              <!-- — VENUSTIANO CARRANZA LOWER — -->
+              <polygon points="200,70 235,70 235,110 200,110" class="alcaldia alcaldia--covered" style="opacity:0" />
+              <!-- — ÁLVARO OBREGÓN (SW) — -->
+              <polygon points="40,120 70,130 75,175 50,195 30,175 28,145" class="alcaldia alcaldia--covered"
+                data-name="Álvaro Obregón" />
+              <!-- — BENITO JUÁREZ (center-south) — -->
+              <polygon points="85,110 120,125 125,160 95,165 75,145 70,130" class="alcaldia alcaldia--covered"
+                data-name="Benito Juárez" />
+              <!-- — COYOACÁN (center-south) — -->
+              <polygon points="120,125 165,125 170,165 140,178 125,160" class="alcaldia alcaldia--covered"
+                data-name="Coyoacán" />
+              <!-- — LA MAGDALENA CONTRERAS (SW) — -->
+              <polygon points="50,195 75,175 80,220 60,235 38,220" class="alcaldia alcaldia--base"
+                data-name="La Magdalena Contreras" />
+              <!-- — TLALPAN (S) — -->
+              <polygon points="80,220 125,195 170,200 165,250 130,280 95,260 80,235" class="alcaldia alcaldia--covered"
+                data-name="Tlalpan" />
+              <!-- — XOCHIMILCO (SE-south) — -->
+              <polygon points="170,165 215,160 225,210 195,240 165,250 170,200" class="alcaldia alcaldia--covered"
+                data-name="Xochimilco" />
+              <!-- — TLÁHUAC (SE) — -->
+              <polygon points="215,160 240,155 250,200 230,225 195,240 225,210" class="alcaldia alcaldia--base"
+                data-name="Tláhuac" />
+              <!-- — MILPA ALTA (S extreme) — -->
+              <polygon points="130,280 165,250 195,240 200,300 160,330 120,310" class="alcaldia alcaldia--base"
+                data-name="Milpa Alta" />
+
+              <!-- — OUTER BORDER — -->
+              <polyline
+                points="60,30 185,20 230,30 240,130 215,160 240,155 250,200 200,300 160,330 120,310 95,260 130,280 80,235 60,235 38,220 28,145 40,90 55,65 60,30"
+                fill="none" stroke="rgba(0,82,204,0.6)" stroke-width="1.5" stroke-linejoin="round" />
+
+              <!-- ── CHECKMARK BADGES ── -->
+              <!-- Cuauhtémoc (hub) -->
+              <circle cx="118" cy="97" r="9" fill="#0052CC" opacity="0.85" filter="url(#glow-blue)" />
+              <path d="M114 97 l3 3 l7-7" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round"
+                stroke-linejoin="round" />
+
+              <!-- Gustavo A. Madero -->
+              <circle cx="152" cy="48" r="8" fill="rgba(255,107,0,0.85)" filter="url(#glow-orange)" />
+              <path d="M148.5 48 l3 3 l6-6" stroke="white" stroke-width="1.6" fill="none" stroke-linecap="round"
+                stroke-linejoin="round" />
+
+              <!-- Iztapalapa -->
+              <circle cx="212" cy="115" r="8" fill="rgba(255,107,0,0.85)" filter="url(#glow-orange)" />
+              <path d="M208.5 115 l3 3 l6-6" stroke="white" stroke-width="1.6" fill="none" stroke-linecap="round"
+                stroke-linejoin="round" />
+
+              <!-- Coyoacán -->
+              <circle cx="143" cy="150" r="8" fill="rgba(255,107,0,0.85)" filter="url(#glow-orange)" />
+              <path d="M139.5 150 l3 3 l6-6" stroke="white" stroke-width="1.6" fill="none" stroke-linecap="round"
+                stroke-linejoin="round" />
+
+              <!-- Azcapotzalco -->
+              <circle cx="83" cy="47" r="7" fill="rgba(0,180,166,0.85)" />
+              <path d="M80 47 l2.5 2.5 l5-5" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"
+                stroke-linejoin="round" />
+
+              <!-- Miguel Hidalgo -->
+              <circle cx="62" cy="102" r="7" fill="rgba(0,180,166,0.85)" />
+              <path d="M59 102 l2.5 2.5 l5-5" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"
+                stroke-linejoin="round" />
+
+              <!-- Benito Juárez -->
+              <circle cx="95" cy="140" r="7" fill="rgba(0,180,166,0.85)" />
+              <path d="M92 140 l2.5 2.5 l5-5" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"
+                stroke-linejoin="round" />
+
+              <!-- Tlalpan -->
+              <circle cx="128" cy="237" r="7" fill="rgba(0,180,166,0.85)" />
+              <path d="M125 237 l2.5 2.5 l5-5" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"
+                stroke-linejoin="round" />
+
+              <!-- Xochimilco -->
+              <circle cx="193" cy="205" r="7" fill="rgba(255,107,0,0.85)" />
+              <path d="M190 205 l2.5 2.5 l5-5" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"
+                stroke-linejoin="round" />
+
+              <!-- Álvaro Obregón -->
+              <circle cx="50" cy="158" r="7" fill="rgba(0,180,166,0.85)" />
+              <path d="M47 158 l2.5 2.5 l5-5" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"
+                stroke-linejoin="round" />
+
+              <!-- Venustiano Carranza -->
+              <circle cx="208" cy="50" r="7" fill="rgba(255,107,0,0.85)" />
+              <path d="M205 50 l2.5 2.5 l5-5" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"
+                stroke-linejoin="round" />
+
+              <!-- Iztacalco -->
+              <circle cx="174" cy="100" r="7" fill="rgba(0,82,204,0.85)" />
+              <path d="M171 100 l2.5 2.5 l5-5" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+
+            <!-- Legend -->
+            <div class="cdmx-map__legend">
+              <span class="cdmx-map__legend-item cdmx-map__legend-item--blue">
+                <span class="dot"></span>Centro / Hub principal
+              </span>
+              <span class="cdmx-map__legend-item cdmx-map__legend-item--orange">
+                <span class="dot"></span>Zona alta cobertura
+              </span>
+              <span class="cdmx-map__legend-item cdmx-map__legend-item--teal">
+                <span class="dot"></span>Zona operativa
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cobertura__stats">
+          <div class="cobertura__stat-card">
+            <div class="cobertura__stat-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="3 11 22 2 13 21 11 13 3 11" />
+              </svg>
+            </div>
+            <div class="cobertura__stat-data">
+              <span class="cobertura__stat-num">100%</span>
+              <span class="cobertura__stat-label">Alcance Total</span>
+              <span class="cobertura__stat-label" style="font-size:.75rem;opacity:.7">Cobertura en toda la CDMX</span>
+            </div>
+          </div>
+          <div class="cobertura__stat-card">
+            <div class="cobertura__stat-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <div class="cobertura__stat-data">
+              <span class="cobertura__stat-num">10+</span>
+              <span class="cobertura__stat-label">Supervisores Activos</span>
+              <span class="cobertura__stat-label" style="font-size:.75rem;opacity:.7">Equipo dedicado en campo</span>
+            </div>
+          </div>
+          <div class="cobertura__stat-card">
+            <div class="cobertura__stat-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
+            <div class="cobertura__stat-data">
+              <span class="cobertura__stat-num">300+</span>
+              <span class="cobertura__stat-label">Visitas Mensuales</span>
+              <span class="cobertura__stat-label" style="font-size:.75rem;opacity:.7">Monitoreo constante</span>
+            </div>
+          </div>
+          <div class="cobertura__stat-card">
+            <div class="cobertura__stat-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <path d="M8 21h8M12 17v4" />
+              </svg>
+            </div>
+            <div class="cobertura__stat-data">
+              <span class="cobertura__stat-num">280+</span>
+              <span class="cobertura__stat-label">Puntos de Venta</span>
+              <span class="cobertura__stat-label" style="font-size:.75rem;opacity:.7">PDV atendidos regularmente</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cobertura__zonas">
+          <h4>Supervisión constante de publicidad con presencia en toda la ciudad</h4>
+          <ul class="cobertura__zonas-list">
+            <li><span class="cobertura__zona-dot cobertura__zona-dot--blue"></span>Equipo especializado en supervisión
+              publicitaria</li>
+            <li><span class="cobertura__zona-dot cobertura__zona-dot--orange"></span>Disponibilidad 365 días del año
+            </li>
+            <li><span class="cobertura__zona-dot cobertura__zona-dot--orange"></span>Cobertura completa en todas las
+              alcaldías</li>
+            <li><span class="cobertura__zona-dot cobertura__zona-dot--teal"></span>Presencia en municipios del Estado de
+              México</li>
+          </ul>
+
+          <div class="cobertura__territory">
+            <div class="cobertura__territory-group">
+              <span class="cobertura__territory-label cobertura__territory-label--cdmx">CDMX</span>
+              <div class="cobertura__chips">
+                <span class="chip chip--cdmx">Álvaro Obregón</span>
+                <span class="chip chip--cdmx">Azcapotzalco</span>
+                <span class="chip chip--cdmx">Benito Juárez</span>
+                <span class="chip chip--cdmx">Coyoacán</span>
+                <span class="chip chip--cdmx">Cuajimalpa</span>
+                <span class="chip chip--cdmx">Cuauhtémoc</span>
+                <span class="chip chip--cdmx">Gustavo A. Madero</span>
+                <span class="chip chip--cdmx">Iztacalco</span>
+                <span class="chip chip--cdmx">Iztapalapa</span>
+                <span class="chip chip--cdmx">Magdalena Contreras</span>
+                <span class="chip chip--cdmx">Miguel Hidalgo</span>
+                <span class="chip chip--cdmx">Milpa Alta</span>
+                <span class="chip chip--cdmx">Tláhuac</span>
+                <span class="chip chip--cdmx">Tlalpan</span>
+                <span class="chip chip--cdmx">Venustiano Carranza</span>
+                <span class="chip chip--cdmx">Xochimilco</span>
+              </div>
+            </div>
+            <div class="cobertura__territory-group">
+              <span class="cobertura__territory-label cobertura__territory-label--edomex">Estado de México</span>
+              <div class="cobertura__chips">
+                <span class="chip chip--edomex">Atizapán</span>
+                <span class="chip chip--edomex">Coacalco</span>
+                <span class="chip chip--edomex">Cuautitlán</span>
+                <span class="chip chip--edomex">Cuautitlán Izcalli</span>
+                <span class="chip chip--edomex">Ecatepec</span>
+                <span class="chip chip--edomex">Huixquilucan</span>
+                <span class="chip chip--edomex">Nezahualcóyotl</span>
+                <span class="chip chip--edomex">Naucalpan</span>
+                <span class="chip chip--edomex">Nicolás Romero</span>
+                <span class="chip chip--edomex">La Paz</span>
+                <span class="chip chip--edomex">Tlalnepantla</span>
+                <span class="chip chip--edomex">Tultitlán</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -508,7 +864,8 @@
       <div class="section__header">
         <div class="section__label">Hablemos</div>
         <h2 class="section__title">Contáctanos hoy</h2>
-        <p class="section__subtitle">Cuéntanos sobre tu campaña y te mostramos cómo podemos proteger tu inversión.</p>
+        <p class="section__subtitle">Cuéntanos sobre tu campaña y te mostramos cómo podemos proteger tu inversión.
+        </p>
       </div>
 
       <div class="contacto__grid">
@@ -548,14 +905,22 @@
             </div>
             <div class="form-group">
               <label for="mensaje">Mensaje *</label>
-              <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos sobre tu campaña: número de puntos, ciudades, duración..." required></textarea>
+              <textarea id="mensaje" name="mensaje" rows="4"
+                placeholder="Cuéntanos sobre tu campaña: número de puntos, ciudades, duración..." required></textarea>
             </div>
             <button type="submit" class="btn btn--primary btn--full">
               <span>Enviar Consulta</span>
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
             </button>
             <div class="form-success" id="formSuccess">
-              <span>🎉</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                <polyline points="22 4 12 14.01 9 11.01" />
+              </svg>
               <p>¡Mensaje enviado! Te contactaremos en menos de 24 horas.</p>
             </div>
           </form>
@@ -563,39 +928,70 @@
 
         <div class="contacto__info">
           <div class="contacto__demo-card">
-            <div class="contacto__demo-icon">📅</div>
+            <div class="contacto__demo-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" />
+                <path d="M16 2v4M8 2v4M3 10h18" />
+              </svg>
+            </div>
             <h3>Agenda una Demostración</h3>
-            <p>¿Prefieres vernos en acción? Agenda una reunión de 30 minutos y te mostraremos cómo monitorearíamos tu campaña.</p>
+            <p>¿Prefieres vernos en acción? Agenda una reunión de 30 minutos y te mostraremos cómo monitorearíamos
+              tu
+              campaña.</p>
             <a href="https://calendly.com" target="_blank" rel="noopener" class="btn btn--primary">Agendar Reunión</a>
           </div>
 
           <div class="contacto__details">
             <div class="contacto__detail-item">
-              <div class="contacto__detail-icon">📍</div>
+              <div class="contacto__detail-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </div>
               <div>
-                <strong>Oficina Central</strong>
-                <span>Ciudad de México, CDMX, México</span>
+                <strong>Oficina</strong>
+                <span>Av. Paseo de los Árboles no. 29, Col. Valle del Tenayo, Tlalnepantla, Estado de México</span>
               </div>
             </div>
             <div class="contacto__detail-item">
-              <div class="contacto__detail-icon">📞</div>
+              <div class="contacto__detail-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.92 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+              </div>
               <div>
                 <strong>Teléfono</strong>
-                <a href="tel:+525512345678">+52 55 1234 5678</a>
+                <a href="tel:+525537367943">55 37 36 79 43</a>
               </div>
             </div>
             <div class="contacto__detail-item">
-              <div class="contacto__detail-icon">💬</div>
+              <div class="contacto__detail-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                </svg>
+              </div>
               <div>
                 <strong>WhatsApp</strong>
-                <a href="https://wa.me/525512345678" target="_blank" rel="noopener">Escríbenos ahora</a>
+                <a href="https://wa.me/525537367943" target="_blank" rel="noopener">55 37 36 79 43</a>
               </div>
             </div>
             <div class="contacto__detail-item">
-              <div class="contacto__detail-icon">✉️</div>
+              <div class="contacto__detail-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+              </div>
               <div>
                 <strong>Email</strong>
-                <a href="mailto:contacto@admonitormx.com">contacto@admonitormx.com</a>
+                <a href="mailto:german77marquez@gmail.com">german77marquez@gmail.com</a>
               </div>
             </div>
           </div>
@@ -604,13 +1000,23 @@
             <h4>Síguenos</h4>
             <div class="social-links">
               <a href="#" class="social-link social-link--fb" aria-label="Facebook">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                </svg>
               </a>
               <a href="#" class="social-link social-link--ig" aria-label="Instagram">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                </svg>
               </a>
               <a href="#" class="social-link social-link--li" aria-label="LinkedIn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
               </a>
             </div>
           </div>
@@ -672,27 +1078,30 @@
       <div class="footer__brand">
         <a href="#inicio" class="logo logo--footer">
           <div class="logo__icon">
-            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="32" height="32" rx="8" fill="url(#grad-logo-footer)"/>
-              <path d="M8 10h16M8 16h10M8 22h13" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
-              <circle cx="24" cy="22" r="3.5" fill="white" opacity="0.9"/>
-              <defs>
-                <linearGradient id="grad-logo-footer" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#0052CC"/>
-                  <stop offset="1" stop-color="#FF6B00"/>
-                </linearGradient>
-              </defs>
-            </svg>
+            <img src="uploads/Logo.jpeg" alt="Publiser MX logo" class="logo__img" />
           </div>
           <div class="logo__text">
-            <span class="logo__name">AdMonitor<span class="logo__accent">MX</span></span>
+            <span class="logo__name">Publiser<span class="logo__accent">MX</span></span>
           </div>
         </a>
-        <p class="footer__tagline">Estamos donde está tu marca. Protegemos tu inversión publicitaria con tecnología, profesionalismo y cobertura nacional.</p>
+        <p class="footer__tagline">Estamos donde está tu marca. Protegemos tu inversión publicitaria con tecnología,
+          profesionalismo y cobertura nacional.</p>
         <div class="social-links social-links--footer">
-          <a href="#" class="social-link social-link--fb" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-          <a href="#" class="social-link social-link--ig" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-          <a href="#" class="social-link social-link--li" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="#" class="social-link social-link--fb" aria-label="Facebook"><svg width="18" height="18"
+              viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+            </svg></a>
+          <a href="#" class="social-link social-link--ig" aria-label="Instagram"><svg width="18" height="18"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg></a>
+          <a href="#" class="social-link social-link--li" aria-label="LinkedIn"><svg width="18" height="18"
+              viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
+              <circle cx="4" cy="4" r="2" />
+            </svg></a>
         </div>
       </div>
 
@@ -730,16 +1139,20 @@
     </div>
     <div class="footer__bottom">
       <div class="container footer__bottom-inner">
-        <p>© 2026 AdMonitor MX. Todos los derechos reservados.</p>
+        <p>© 2026 Publiser MX. Todos los derechos reservados.</p>
         <p>Hecho con ❤️ en México</p>
       </div>
     </div>
   </footer>
 
   <a href="https://wa.me/525512345678" target="_blank" rel="noopener" class="whatsapp-fab" aria-label="WhatsApp">
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+    </svg>
   </a>
 
   <script src="main.js"></script>
 </body>
+
 </html>
