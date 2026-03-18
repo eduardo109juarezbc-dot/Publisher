@@ -91,12 +91,12 @@
   };
   const heroObserver = new IntersectionObserver(entries => {
     if (entries[0].isIntersecting) {
-      // First stat: 365/12 — non-numeric, leave as-is or reveal it
+      // First stat: 365/12 — non-numeric, leave as-is
       if (statNumbers[0]) statNumbers[0].textContent = '365/12';
       // Second stat: 100% satisfaction
       if (statNumbers[1]) animateCount(statNumbers[1], 100, '%', 1400);
-      // Third stat: +8 — leave as-is
-      if (statNumbers[2]) statNumbers[2].textContent = '+8';
+      // Third stat: 2,136+ Campañas Monitoreadas
+      if (statNumbers[2]) animateCount(statNumbers[2], 2136, '+', 1800);
       heroObserver.disconnect();
     }
   }, { threshold: 0.5 });
