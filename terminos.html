@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Términos y Condiciones | Publiser MX</title>
+  <meta name="description" content="Términos y Condiciones de uso del sitio web y servicios de Publiser MX. Monitoreo y auditoría publicitaria en México." />
+  <link rel="stylesheet" href="fonts/google-fonts.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="libs/lucide.min.js"></script>
+  <style>
+    .legal-hero {
+      background: var(--gradient-dark);
+      padding: 140px 0 64px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .legal-hero__breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 20px;
+      font-family: 'Outfit', sans-serif;
+    }
+    .legal-hero__breadcrumb a { color: rgba(255,255,255,0.4); transition: var(--transition-fast); }
+    .legal-hero__breadcrumb a:hover { color: var(--orange-400); }
+    .legal-hero__breadcrumb span { color: var(--orange-500); }
+    .legal-hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--orange-500);
+      background: rgba(255,107,0,0.12);
+      border: 1px solid rgba(255,107,0,0.25);
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+    .legal-hero__title {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .legal-hero__subtitle {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.5);
+      max-width: 540px;
+    }
+    .legal-hero__meta {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-top: 28px;
+      flex-wrap: wrap;
+    }
+    .legal-hero__meta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.4);
+      font-family: 'Outfit', sans-serif;
+    }
+    .legal-hero__meta-item svg { color: var(--orange-500); flex-shrink: 0; }
+
+    .legal-layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 56px;
+      padding: 72px 0 96px;
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .legal-layout { grid-template-columns: 1fr; gap: 40px; }
+      .legal-toc { display: none; }
+    }
+
+    .legal-toc {
+      position: sticky;
+      top: 96px;
+      background: var(--gray-100);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      border: 1px solid var(--gray-200);
+    }
+    .legal-toc__title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gray-400);
+      margin-bottom: 16px;
+    }
+    .legal-toc__list { display: flex; flex-direction: column; gap: 4px; }
+    .legal-toc__link {
+      font-size: 0.845rem;
+      color: var(--gray-600);
+      padding: 7px 10px;
+      border-radius: var(--radius-sm);
+      transition: var(--transition-fast);
+      display: block;
+      line-height: 1.4;
+    }
+    .legal-toc__link:hover {
+      background: var(--blue-100);
+      color: var(--blue-600);
+      padding-left: 14px;
+    }
+
+    .legal-content { min-width: 0; }
+    .legal-article { display: flex; flex-direction: column; gap: 48px; }
+    .legal-section__anchor { display: block; position: relative; top: -100px; visibility: hidden; }
+    .legal-section__header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid var(--gray-100);
+    }
+    .legal-section__num {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--gradient-brand);
+      color: var(--white);
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .legal-section__title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--dark-800);
+    }
+    .legal-section p {
+      font-size: 0.95rem;
+      color: var(--gray-600);
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+    .legal-section p:last-child { margin-bottom: 0; }
+    .legal-section strong { color: var(--dark-800); }
+
+    .legal-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+    .legal-table th {
+      background: var(--dark-800);
+      color: var(--white);
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 12px 16px;
+      text-align: left;
+    }
+    .legal-table th:first-child { border-radius: var(--radius-sm) 0 0 0; }
+    .legal-table th:last-child { border-radius: 0 var(--radius-sm) 0 0; }
+    .legal-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--gray-100);
+      color: var(--gray-600);
+      vertical-align: top;
+      line-height: 1.55;
+    }
+    .legal-table tr:last-child td { border-bottom: none; }
+    .legal-table tr:nth-child(even) td { background: var(--gray-100); }
+
+    .legal-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 14px 0;
+    }
+    .legal-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.93rem;
+      color: var(--gray-600);
+      line-height: 1.6;
+    }
+    .legal-list li::before {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--orange-500);
+      flex-shrink: 0;
+      margin-top: 8px;
+    }
+
+    .legal-highlight {
+      background: var(--blue-100);
+      border-left: 4px solid var(--blue-600);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 16px 20px;
+      margin: 20px 0;
+    }
+    .legal-highlight p { color: var(--dark-800) !important; margin: 0 !important; font-size: 0.9rem !important; }
+
+    .legal-warning {
+      background: var(--orange-100);
+      border-left: 4px solid var(--orange-500);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 16px 20px;
+      margin: 20px 0;
+    }
+    .legal-warning p { color: var(--dark-800) !important; margin: 0 !important; font-size: 0.9rem !important; }
+
+    .legal-contact-card {
+      background: var(--gradient-dark);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .legal-contact-card h4 { font-family: 'Outfit', sans-serif; font-size: 1rem; font-weight: 700; color: var(--white); }
+    .legal-contact-card p { color: rgba(255,255,255,0.55) !important; font-size: 0.88rem !important; margin: 0 !important; }
+    .legal-contact-card a { color: var(--orange-400); font-weight: 600; }
+    .legal-contact-card a:hover { color: var(--orange-500); }
+    .legal-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+    }
+    .legal-contact-item svg { color: var(--orange-500); flex-shrink: 0; }
+
+    .servicios-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 16px 0;
+    }
+    @media (max-width: 600px) { .servicios-grid { grid-template-columns: 1fr; } }
+    .servicio-tag {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--gray-100);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      font-size: 0.88rem;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      color: var(--dark-800);
+    }
+    .servicio-tag svg { color: var(--blue-600); flex-shrink: 0; }
+  </style>
+</head>
+
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <div class="logo__icon">
+          <img src="uploads/Logo.png" alt="Publiser MX logo" class="logo__img" />
+        </div>
+        <div class="logo__text">
+          <span class="logo__name">Publiser<span class="logo__accent">MX</span></span>
+          <span class="logo__slogan">Estamos donde está tu marca</span>
+        </div>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="index.html#inicio" class="nav__link">Inicio</a>
+        <a href="index.html#servicios" class="nav__link">Servicios</a>
+        <a href="index.html#casos" class="nav__link">Casos de Éxito</a>
+        <a href="index.html#contacto" class="nav__link">Contacto</a>
+        <a href="index.html#blog" class="nav__link">Blog</a>
+        <a href="index.html#contacto" class="btn btn--nav">Agenda Demo</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <div class="legal-hero">
+    <div class="container">
+      <div class="legal-hero__breadcrumb">
+        <a href="index.html">Inicio</a>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+        <span>Términos y Condiciones</span>
+      </div>
+      <div class="legal-hero__badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        Legal
+      </div>
+      <h1 class="legal-hero__title">Términos y Condiciones</h1>
+      <p class="legal-hero__subtitle">
+        Condiciones que regulan el uso del sitio web publisermx.com y la contratación de los servicios de monitoreo y auditoría publicitaria de Publiser MX.
+      </p>
+      <div class="legal-hero__meta">
+        <div class="legal-hero__meta-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          Última actualización: 24 de marzo de 2026
+        </div>
+        <div class="legal-hero__meta-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          Jurisdicción: Ciudad de México, México
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== CONTENIDO ========== -->
+  <div class="container">
+    <div class="legal-layout">
+
+      <!-- Sidebar TOC -->
+      <aside class="legal-toc">
+        <p class="legal-toc__title">Contenido</p>
+        <nav class="legal-toc__list">
+          <a href="#aceptacion" class="legal-toc__link">1. Aceptación de los términos</a>
+          <a href="#objeto" class="legal-toc__link">2. Objeto del sitio</a>
+          <a href="#servicios-ofrecidos" class="legal-toc__link">3. Servicios ofrecidos</a>
+          <a href="#contratacion" class="legal-toc__link">4. Proceso de contratación</a>
+          <a href="#obligaciones" class="legal-toc__link">5. Obligaciones del usuario</a>
+          <a href="#propiedad" class="legal-toc__link">6. Propiedad intelectual</a>
+          <a href="#responsabilidad" class="legal-toc__link">7. Limitación de responsabilidad</a>
+          <a href="#confidencialidad" class="legal-toc__link">8. Confidencialidad</a>
+          <a href="#jurisdiccion" class="legal-toc__link">9. Legislación y jurisdicción</a>
+          <a href="#contacto-terminos" class="legal-toc__link">10. Contacto</a>
+        </nav>
+      </aside>
+
+      <!-- Content -->
+      <main class="legal-content">
+        <div class="legal-article">
+
+          <!-- 1. Aceptación -->
+          <div class="legal-section">
+            <span class="legal-section__anchor" id="aceptacion"></span>
+            <div class="legal-section__header">
+              <div class="legal-section__num">1</div>
+              <h2 class="legal-section__title">Aceptación de los términos</h2>
+            </div>
+            <p>
+              Al acceder y navegar en el sitio web <strong>publisermx.com</strong> (en adelante, "el Sitio"), o al utilizar cualquier medio de contacto habilitado por <strong>Publiser MX</strong> para solicitar información o contratar servicios, usted reconoce haber leído, comprendido y aceptado los presentes Términos y Condiciones en su totalidad.
+            </p>
+            <p>
+              Si no está de acuerdo con alguno de los términos aquí establecidos, le pedimos que se abstenga de utilizar el Sitio o de contratar nuestros servicios.
+            </p>
+            <div class="legal-highlight">
+              <p>
+                El uso continuado del Sitio o la solicitud formal de servicios constituyen la aceptación tácita de estos Términos y Condiciones, incluyendo cualquier actualización futura publicada en esta misma página.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2. Objeto -->
+          <div class="legal-section">
+            <span class="legal-section__anchor" id="objeto"></span>
+            <div class="legal-section__header">
+              <div class="legal-section__num">2</div>
+              <h2 class="legal-section__title">Objeto del sitio web</h2>
+            </div>
+            <p>
+              El Sitio es una plataforma informativa y de contacto comercial operada por <strong>Publiser MX</strong>, cuyo objeto es presentar los servicios de monitoreo y auditoría publicitaria que ofrece la empresa, facilitar el contacto con clientes potenciales y actuales, y difundir contenido de valor sobre la industria publicitaria en México.
+            </p>
+            <p>
+              El formulario de contacto disponible en el Sitio tiene como único fin recabar datos para dar seguimiento a solicitudes de información o demostración. <strong>El envío del formulario no constituye en ningún caso un contrato de servicios ni genera obligación alguna por parte de Publiser MX.</strong>
+            </p>
+          </div>
+
+          <!-- 3. Servicios -->
+          <div class="legal-section">
+            <span class="legal-section__anchor" id="servicios-ofrecidos"></span>
+            <div class="legal-section__header">
+              <div class="legal-section__num">3</div>
+              <h2 class="legal-section__title">Servicios ofrecidos por Publiser MX</h2>
+            </div>
+            <p>
+              Publiser MX ofrece servicios especializados de monitoreo y auditoría publicitaria para marcas, agencias y empresas con operaciones en Ciudad de México. Los servicios disponibles son:
+            </p>
+            <div class="servicios-grid">
+              <div class="servicio-tag">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                Monitoreo de Publicidad Exterior y Digital (OOH y DOOH)
+              </div>
+              <div class="servicio-tag">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+                Monitoreo de Publicidad Digital en Punto de Venta (PDV)
+              </div>
+              <div class="servicio-tag">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                Auditoría de Imagen Corporativa
+              </div>
+              <div class="servicio-tag">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+                POP Refresh (Gestión y Reposición de Material Publicitario)
+              </div>
+            </div>
+            <p>
+              El alcance específico, los entregables, los plazos, la cobertura y los precios de cada servicio se definen y acuerdan exclusivamente mediante una <strong>propuesta comercial formal</strong> presentada por Publiser MX y aceptada por el cliente mediante firma o confirmación escrita. Lo publicado en el Sitio tiene carácter descriptivo e informativo.
+            </p>
+          </div>
+
+          <!-- 4. Contratación -->
+          <div class="legal-section">
+            <span class="legal-section__anchor" id="contratacion"></span>
+            <div class="legal-section__header">
+              <div class="legal-section__num">4</div>
+              <h2 class="legal-section__title">Proceso de contratación</h2>
+            </div>
+            <p>
+              La relación comercial entre Publiser MX y sus clientes se formaliza conforme al siguiente proceso:
+            </p>
+            <table class="legal-table">
+              <thead>
+                <tr>
+                  <th>Etapa</th>
+                  <th>Descripción</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>1. Solicitud</strong></td>
+                  <td>El cliente envía una solicitud de información o cotización a través del formulario web, WhatsApp, correo o llamada telefónica.</td>
+                </tr>
+                <tr>
+                  <td><strong>2. Diagnóstico</strong></td>
+                  <td>Publiser MX evalúa el requerimiento y puede solicitar información adicional sobre la campaña, puntos de monitoreo, zona geográfica y duración.</td>
+                </tr>
+                <tr>
+                  <td><strong>3. Propuesta</strong></td>
+                  <td>Publiser MX emite una propuesta comercial escrita que detalla el alcance del servicio, los entregables, los plazos y el costo.</td>
+                </tr>
+                <tr>
+                  <td><strong>4. Formalización</strong></td>
+                  <td>El cliente acepta la propuesta mediante firma electrónica o física, o confirmación escrita por correo electrónico. En este momento nace la relación contractual.</td>
+                </tr>
+                <tr>
+                  <td><strong>5. Ejecución</strong></td>
+                  <td>Publiser MX inicia las actividades de monitoreo o auditoría conforme a los términos acordados.</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="legal-warning">
+              <p>
+                <strong>Importante:</strong> ninguna publicación en redes sociales, precio o descripción de servicio en el Sitio constituye una oferta vinculante. Los precios se determinan caso a caso según el alcance del proyecto.
+              </p>
+            </div>
+          </div>
+
+          <!-- 5. Obligaciones del usuario -->
+          <div class="legal-section">
+            <span class="legal-section__anchor" id="obligaciones"></span>
+            <div class="legal-section__header">
+              <div class="legal-section__num">5</div>
+              <h2 class="legal-section__title">Obligaciones del usuario del Sitio</h2>
+            </div>
+            <p>
+              Al acceder al Sitio, el usuario se compromete a:
+            </p>
+            <ul class="legal-list">
+              <li>Utilizar el Sitio exclusivamente para fines lícitos y conforme a estos Términos y Condiciones.</li>
+              <li>Proporcionar información veraz, completa y actualizada al completar el formulario de contacto u otros medios de comunicación con Publiser MX.</li>
+              <li>No intentar acceder, alterar, interrumpir o dañar el Sitio, sus sistemas, servidores o redes asociadas.</li>
+              <li>No reproducir, copiar, distribuir ni explotar comercialmente ningún contenido del Sitio sin autorización expresa y por escrito de Publiser MX.</li>
+              <li>No suplantar la identidad de otra persona, empresa o entidad al comunicarse con Publiser MX.</li>
+              <li>No utilizar el Sitio para enviar comunicaciones no solicitadas (spam), malware o cualquier contenido dañino.</li>
+            </ul>
+            <p>
+              Publiser MX se reserva el derecho de rechazar solicitudes de servicio provenientes de usuarios que incumplan las obligaciones anteriores.
+            </p>
+          </div>
+
+          <!-- 6. Propiedad intelectual -->
+          <div class="legal-section">
+            <span class="legal-section__anchor" id="propiedad"></span>
+            <div class="legal-section__header">
+              <div class="legal-section__num">6</div>
+              <h2 class="legal-section__title">Propiedad intelectual</h2>
+            </div>
+            <p>
+              Todos los elementos que componen el Sitio, incluyendo de manera enunciativa más no limitativa: textos, diseño gráfico, logotipo, marca "Publiser MX", fotografías, videos, ilustraciones, código fuente y estructura de navegación, son propiedad exclusiva de Publiser MX o se utilizan con autorización de sus titulares.
+            </p>
+            <p>
+              Las imágenes de proyectos, campañas y puntos de venta publicadas en el Sitio pertenecen a Publiser MX o a sus clientes, y han sido utilizadas con la autorización correspondiente. Los testimonios reflejan experiencias reales de colaboradores de empresas clientes y han sido incluidos con su conocimiento.
+            </p>
+            <p>
+              Queda expresamente prohibido:
+            </p>
+            <ul class="legal-list">
+              <li>Reproducir, modificar, distribuir o usar comercialmente cualquier contenido del Sitio sin autorización previa por escrito.</li>
+              <li>Utilizar la marca "Publiser MX", su logotipo o cualquier signo distintivo asociado sin consentimiento expreso.</li>
+              <li>Presentar los reportes, evidencias fotográficas y entregables generados por Publiser MX como propios ante terceros.</li>
+            </ul>
+            <div class="legal-highlight">
+              <p>
+                Los reportes, evidencias fotográficas, videos e informes entregados en el marco de los servicios contratados son de propiedad compartida entre Publiser MX y el cliente, conforme a lo que se estipule en el contrato de servicio respectivo.
+              </p>
+            </div>
+          </div>
+
+          <!-- 7. Limitación de responsabilidad -->
+          <div class="legal-section">
+            <span class="legal-section__anchor" id="responsabilidad"></span>
+            <div class="legal-section__header">
+              <div class="legal-section__num">7</div>
+              <h2 class="legal-section__title">Limitación de responsabilidad</h2>
+            </div>
+            <p>
+              Publiser MX realiza esfuerzos razonables para mantener el Sitio disponible y la información actualizada, pero <strong>no garantiza la disponibilidad continua e ininterrumpida</strong> del mismo, ni que esté libre de errores o de elementos maliciosos introducidos por terceros.
+            </p>
+            <p>
+              En relación con los servicios de monitoreo y auditoría publicitaria:
+            </p>
+            <ul class="legal-list">
+              <li>Publiser MX garantiza la ejecución del servicio conforme al alcance acordado en la propuesta comercial firmada.</li>
+              <li>Los resultados del monitoreo dependen de factores externos fuera del control de Publiser MX, tales como condiciones climáticas, accesibilidad a puntos de venta, disponibilidad de material por parte del cliente o terceros, y decisiones operativas del anunciante.</li>
+              <li>Publiser MX no es responsable de los resultados comerciales (ventas, audiencia, retorno de inversión) de las campañas monitoreadas, ya que su función es verificar y documentar la ejecución, no garantizar el desempeño de la campaña.</li>
+              <li>En ningún caso la responsabilidad total de Publiser MX ante el cliente excederá el monto pagado por el servicio específico que originó el reclamo.</li>
+            </ul>
+            <p>
+              Los vínculos a sitios externos que pudieran aparecer en el Sitio (como Calendly para agendamiento de reuniones) son de terceros independientes. Publiser MX no asume responsabilidad por el contenido, políticas o prácticas de dichos sitios.
+            </p>
+          </div>
+
+          <!-- 8. Confidencialidad -->
+          <div class="legal-section">
+            <span class="legal-section__anchor" id="confidencialidad"></span>
+            <div class="legal-section__header">
+              <div class="legal-section__num">8</div>
+              <h2 class="legal-section__title">Confidencialidad de la información del cliente</h2>
+            </div>
+            <p>
+              Publiser MX reconoce que durante la prestación de sus servicios puede acceder a información confidencial del cliente, incluyendo datos de campañas, estrategias comerciales, listados de puntos de venta, materiales creativos y resultados internos.
+            </p>
+            <p>
+              Publiser MX se compromete a:
+            </p>
+            <ul class="legal-list">
+              <li>Tratar toda la información del cliente como estrictamente confidencial.</li>
+              <li>No divulgar dicha información a terceros sin consentimiento previo y por escrito del cliente, salvo obligación legal.</li>
+              <li>Utilizar la información exclusivamente para la prestación del servicio contratado.</li>
+              <li>Implementar medidas razonables de seguridad para proteger la información frente a accesos no autorizados.</li>
+            </ul>
+            <p>
+              Esta obligación de confidencialidad persiste durante la vigencia del contrato de servicio y por un período de <strong>dos años</strong> posteriores a su terminación, salvo que las partes acuerden por escrito un plazo distinto.
+            </p>
+          </div>
+
+          <!-- 9. Jurisdicción -->
+          <div class="legal-section">
+            <span class="legal-section__anchor" id="jurisdiccion"></span>
+            <div class="legal-section__header">
+              <div class="legal-section__num">9</div>
+              <h2 class="legal-section__title">Legislación aplicable y jurisdicción</h2>
+            </div>
+            <p>
+              Los presentes Términos y Condiciones se rigen e interpretan de conformidad con las leyes vigentes de los <strong>Estados Unidos Mexicanos</strong>. Para la resolución de cualquier controversia derivada del uso del Sitio o de la contratación de los servicios de Publiser MX, las partes se someten expresamente a la jurisdicción de los <strong>tribunales competentes de la Ciudad de México</strong>, renunciando a cualquier otro fuero que pudiera corresponderles por razón de sus domicilios presentes o futuros.
+            </p>
+            <p>
+              Antes de acudir a instancias jurisdiccionales, las partes se comprometen a buscar una solución amigable mediante comunicación directa en un plazo no menor a <strong>15 días hábiles</strong> desde que se notifique el inicio de la controversia.
+            </p>
+          </div>
+
+          <!-- 10. Contacto -->
+          <div class="legal-section">
+            <span class="legal-section__anchor" id="contacto-terminos"></span>
+            <div class="legal-section__header">
+              <div class="legal-section__num">10</div>
+              <h2 class="legal-section__title">Contacto</h2>
+            </div>
+            <p>
+              Para cualquier duda, aclaración o comunicación relacionada con estos Términos y Condiciones, puede contactarnos a través de los siguientes medios:
+            </p>
+            <div class="legal-contact-card">
+              <h4>Publiser MX</h4>
+              <div class="legal-contact-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                <span>Correo electrónico: <a href="mailto:contacto@publisermx.com">contacto@publisermx.com</a></span>
+              </div>
+              <div class="legal-contact-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.92 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>Teléfono y WhatsApp: <a href="tel:+525537367943">55 37 36 79 43</a></span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </main>
+
+    </div>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer">
+    <div class="container footer__inner">
+
+      <div class="footer__brand">
+        <a href="index.html" class="logo logo--footer">
+          <div class="logo__icon">
+            <img src="uploads/Logo.png" alt="Publiser MX logo" class="logo__img" />
+          </div>
+          <div class="logo__text">
+            <span class="logo__name">Publiser<span class="logo__accent">MX</span></span>
+          </div>
+        </a>
+        <p class="footer__tagline">Estamos donde está tu marca. Protegemos tu inversión publicitaria con tecnología, profesionalismo y cobertura en CDMX.</p>
+        <div class="social-links social-links--footer">
+          <a href="#" class="social-link social-link--ig" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__links-group">
+        <h5>Navegación</h5>
+        <ul>
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li><a href="index.html#quienes">Quiénes Somos</a></li>
+          <li><a href="index.html#servicios">Servicios</a></li>
+          <li><a href="index.html#casos">Casos de Éxito</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+          <li><a href="index.html#blog">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__links-group">
+        <h5>Servicios</h5>
+        <ul>
+          <li><a href="index.html#servicios">Publicidad Exterior</a></li>
+          <li><a href="index.html#servicios">PDV Interior Digital</a></li>
+          <li><a href="index.html#servicios">Imagen Corporativa</a></li>
+          <li><a href="index.html#servicios">POP Refresh</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__links-group">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="aviso-privacidad.html">Aviso de Privacidad</a></li>
+          <li><a href="terminos.html">Términos y Condiciones</a></li>
+          <li><a href="cookies.html">Política de Cookies</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>© 2026 Publiser MX. Todos los derechos reservados.</p>
+        <p>Hecho con ❤️ en México</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/525537367943" target="_blank" rel="noopener" class="whatsapp-fab" aria-label="WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
