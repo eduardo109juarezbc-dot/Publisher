@@ -316,6 +316,78 @@ button {
   color: var(--orange-400);
 }
 
+/* Nav dropdown */
+.nav__dropdown-wrap {
+  position: relative;
+}
+
+.nav__dropdown-trigger {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.nav__dropdown-trigger svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.nav__dropdown-wrap:hover .nav__dropdown-trigger svg,
+.nav__dropdown-wrap.open .nav__dropdown-trigger svg {
+  transform: rotate(180deg);
+}
+
+.nav__dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 230px;
+  background: rgba(5, 13, 26, 0.97);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: 6px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  backdrop-filter: blur(20px);
+  z-index: 100;
+}
+
+.nav__dropdown-wrap:hover .nav__dropdown-menu,
+.nav__dropdown-wrap.open .nav__dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav__dropdown-item {
+  display: block;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 9px 14px;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-fast);
+  white-space: nowrap;
+}
+
+.nav__dropdown-item:hover {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.nav__dropdown-item.active {
+  color: var(--orange-400);
+}
+
 /* Hamburger */
 .hamburger {
   display: none;
@@ -2039,6 +2111,46 @@ button {
     padding: 14px 28px;
   }
 
+  .nav__dropdown-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav__dropdown-trigger {
+    font-size: 1.3rem;
+    padding: 14px 28px;
+  }
+
+  .nav__dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    min-width: 0;
+    width: 100%;
+    text-align: center;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+  }
+
+  .nav__dropdown-wrap.open .nav__dropdown-menu {
+    max-height: 300px;
+    padding: 6px;
+  }
+
+  .nav__dropdown-item {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
   .hamburger {
     display: flex;
     z-index: 1001;
@@ -2763,9 +2875,9 @@ button {
 
 /* ===== COMPANY LOGO IMAGE ===== */
 .logo__img {
-  height: 72px;
+  height: 80px;
   width: auto;
-  max-width: 160px;
+  max-width: 180px;
   border-radius: 0;
   object-fit: contain;
   display: block;
@@ -2773,8 +2885,8 @@ button {
 }
 
 .logo--footer .logo__img {
-  width: 36px;
-  height: 36px;
+  width: 48px;
+  height: 48px;
 }
 
 /* ===== COBERTURA — territory chip layout ===== */

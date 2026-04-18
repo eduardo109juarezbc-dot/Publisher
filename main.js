@@ -1,38 +1,30 @@
-/* ==============================================
-   AdMonitor MX — Main JavaScript
-   ============================================== */
-
 (function () {
   'use strict';
 
-  /* ---- HEADER scroll state ---- */
   const header = document.getElementById('header');
-  const onScroll = () => {
-    if (window.scrollY > 40) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
-  };
+
+  // Header scroll
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 40);
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  /* ---- Active nav link ---- */
+  // Active nav link
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav__link');
   const activateLink = () => {
-    const scrollY = window.scrollY + 100;
+    const threshold = header.offsetHeight + 8;
+    let current = null;
     sections.forEach(sec => {
-      if (scrollY >= sec.offsetTop && scrollY < sec.offsetTop + sec.offsetHeight) {
-        navLinks.forEach(a => a.classList.remove('active'));
-        const match = document.querySelector(`.nav__link[href="#${sec.id}"]`);
-        if (match) match.classList.add('active');
-      }
+      if (sec.getBoundingClientRect().top <= threshold) current = sec.id;
+    });
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === `#${current}`);
     });
   };
   window.addEventListener('scroll', activateLink, { passive: true });
+  activateLink();
 
-  /* ---- Hamburger / mobile nav ---- */
+  // Hamburger mobile nav
   const hamburger = document.getElementById('hamburger');
   const nav = document.getElementById('nav');
   hamburger.addEventListener('click', () => {
@@ -48,157 +40,161 @@
     });
   });
 
-  /* ---- Smooth scroll for anchor links ---- */
+  // Dropdown toggle (mobile tap; desktop uses CSS hover)
+  const dropdownWraps = document.querySelectorAll('.nav__dropdown-wrap');
+  dropdownWraps.forEach(wrap => {
+    const trigger = wrap.querySelector('.nav__dropdown-trigger');
+    trigger.addEventListener('click', e => {
+      e.stopPropagation();
+      const isOpen = wrap.classList.toggle('open');
+      trigger.setAttribute('aria-expanded', isOpen);
+    });
+  });
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.nav__dropdown-wrap')) {
+      dropdownWraps.forEach(wrap => {
+        wrap.classList.remove('open');
+        const trigger = wrap.querySelector('.nav__dropdown-trigger');
+        if (trigger) trigger.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+
+  // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', e => {
       const target = document.querySelector(anchor.getAttribute('href'));
       if (target) {
         e.preventDefault();
-        const offset = header.offsetHeight + 16;
-        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        const top = target.getBoundingClientRect().top + window.scrollY - (header.offsetHeight + 16);
         window.scrollTo({ top, behavior: 'smooth' });
       }
     });
   });
 
-  /* ---- Intersection Observer: AOS-like reveals ---- */
-  const revealEls = document.querySelectorAll('[data-aos]');
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const delay = parseInt(entry.target.dataset.delay || 0, 10);
-          setTimeout(() => entry.target.classList.add('visible'), delay);
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { rootMargin: '0px 0px -80px 0px', threshold: 0.1 }
-  );
-  revealEls.forEach(el => observer.observe(el));
+  // AOS-like reveals
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const delay = parseInt(entry.target.dataset.delay || 0, 10);
+        setTimeout(() => entry.target.classList.add('visible'), delay);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -80px 0px', threshold: 0.1 });
+  document.querySelectorAll('[data-aos]').forEach(el => observer.observe(el));
 
-  /* ---- Counter animation for hero stats ---- */
+  // Hero stats counter
   const statNumbers = document.querySelectorAll('.hero__stat-number');
   const animateCount = (el, end, suffix, duration) => {
     const start = performance.now();
-    const step = timestamp => {
-      const progress = Math.min((timestamp - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      el.textContent = Math.floor(eased * end) + suffix;
+    const step = ts => {
+      const progress = Math.min((ts - start) / duration, 1);
+      el.textContent = Math.floor((1 - Math.pow(1 - progress, 3)) * end) + suffix;
       if (progress < 1) requestAnimationFrame(step);
     };
     requestAnimationFrame(step);
   };
-  const heroObserver = new IntersectionObserver(entries => {
-    if (entries[0].isIntersecting) {
-      // First stat: 365/12 — non-numeric, leave as-is
-      if (statNumbers[0]) statNumbers[0].textContent = '365/12';
-      // Second stat: 100% satisfaction
-      if (statNumbers[1]) animateCount(statNumbers[1], 100, '%', 1400);
-      // Third stat: 2,136+ Campañas Monitoreadas
-      if (statNumbers[2]) animateCount(statNumbers[2], 2136, '+', 1800);
-      heroObserver.disconnect();
-    }
-  }, { threshold: 0.5 });
   const heroStats = document.querySelector('.hero__stats');
-  if (heroStats) heroObserver.observe(heroStats);
-
-  /* ---- Contact form ---- */
-  const form = document.getElementById('contactForm');
-  const successMsg = document.getElementById('formSuccess');
-
-  const validateField = input => {
-    const isEmpty = !input.value.trim();
-    const isEmail = input.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim());
-    const invalid = (input.required && isEmpty) || (input.type === 'email' && !isEmpty && isEmail);
-    input.classList.toggle('error', invalid);
-    return !invalid;
-  };
-
-  if (form) {
-    // Real-time validation
-    form.querySelectorAll('input, textarea').forEach(field => {
-      field.addEventListener('blur', () => validateField(field));
-      field.addEventListener('input', () => {
-        if (field.classList.contains('error')) validateField(field);
-      });
-    });
-
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      let valid = true;
-      form.querySelectorAll('input[required], textarea[required]').forEach(field => {
-        if (!validateField(field)) valid = false;
-      });
-      if (!valid) return;
-
-      // Simulate submission
-      const btn = form.querySelector('button[type="submit"]');
-      btn.disabled = true;
-      btn.querySelector('span').textContent = 'Enviando...';
-
-      setTimeout(() => {
-        form.querySelectorAll('input, textarea, select').forEach(f => (f.value = ''));
-        btn.disabled = false;
-        btn.querySelector('span').textContent = 'Enviar Consulta';
-        successMsg.classList.add('show');
-        setTimeout(() => successMsg.classList.remove('show'), 5000);
-      }, 1500);
-    });
+  if (heroStats) {
+    new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) {
+        if (statNumbers[0]) statNumbers[0].textContent = '365/12';
+        if (statNumbers[1]) animateCount(statNumbers[1], 100, '%', 1400);
+        if (statNumbers[2]) animateCount(statNumbers[2], 2136, '+', 1800);
+        entries[0].target._obs?.disconnect();
+      }
+    }, { threshold: 0.5 }).observe(heroStats);
   }
 
-  /* ---- Testimonial auto-carousel on mobile ---- */
-  let currentTestimonial = 0;
+  // Testimonial carousel (mobile)
   const testimonials = document.querySelectorAll('.testimonial-card');
-  const setupTestimonialCarousel = () => {
-    if (window.innerWidth > 768 || testimonials.length === 0) return;
-    testimonials.forEach((t, i) => {
-      t.style.display = i === 0 ? 'block' : 'none';
-    });
+  if (window.innerWidth <= 768 && testimonials.length > 0) {
+    let current = 0;
+    testimonials.forEach((t, i) => { t.style.display = i === 0 ? 'block' : 'none'; });
     setInterval(() => {
-      testimonials[currentTestimonial].style.display = 'none';
-      currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-      testimonials[currentTestimonial].style.display = 'block';
+      testimonials[current].style.display = 'none';
+      current = (current + 1) % testimonials.length;
+      testimonials[current].style.display = 'block';
     }, 4000);
-  };
-  setupTestimonialCarousel();
+  }
 
-  /* ---- Pause logo marquee on hover ---- */
+  // Pause logo marquee on hover
   const track = document.querySelector('.clientes-logos__track');
   if (track) {
     track.addEventListener('mouseenter', () => (track.style.animationPlayState = 'paused'));
     track.addEventListener('mouseleave', () => (track.style.animationPlayState = 'running'));
   }
 
-  /* ---- Gallery item click (lightbox placeholder) ---- */
-  document.querySelectorAll('.gallery__img-placeholder').forEach(item => {
-    item.addEventListener('click', () => {
-      const label = item.querySelector('span')?.textContent;
-      if (label) {
-        const overlay = document.createElement('div');
-        overlay.style.cssText = `
-          position:fixed;inset:0;background:rgba(0,0,0,0.88);z-index:9999;
-          display:flex;align-items:center;justify-content:center;flex-direction:column;gap:20px;
-          cursor:pointer;backdrop-filter:blur(8px);
-        `;
-        overlay.innerHTML = `
-          <div style="width:600px;max-width:90vw;aspect-ratio:16/9;background:linear-gradient(135deg,#0a1628,#1a2e52);border-radius:16px;
-            display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;border:1px solid rgba(255,255,255,0.1);">
-            <svg width="72" height="72" viewBox="0 0 72 72" fill="none"><rect x="6" y="10" width="60" height="40" rx="6" stroke="rgba(255,255,255,0.3)" stroke-width="2"/><path d="M6 40l18-14 12 10 10-8 20 16" stroke="rgba(255,255,255,0.3)" stroke-width="2.5" stroke-linejoin="round"/></svg>
-            <p style="color:rgba(255,255,255,0.5);font-family:Outfit,sans-serif;font-size:1rem;">${label}</p>
-          </div>
-          <p style="color:rgba(255,255,255,0.4);font-size:0.8rem;">Haz clic para cerrar</p>
-        `;
-        overlay.addEventListener('click', () => document.body.removeChild(overlay));
-        document.body.appendChild(overlay);
-      }
-    });
+  // Keyboard accessible service cards
+  document.querySelectorAll('.servicio-card').forEach(card => card.setAttribute('tabindex', '0'));
+
+  // Contact form
+  const form = document.getElementById('contactForm');
+  const successMsg = document.getElementById('formSuccess');
+  if (!form) return;
+
+  const INJECTION = /('|--|;|\/\*|\*\/|xp_|exec\s*\(|select\s+|insert\s+|update\s+|delete\s+|drop\s+|alter\s+|create\s+|union\s+|script\s*:|javascript\s*:|on\w+\s*=)/i;
+
+  const LIMITS = { nombre: 100, apellido: 100, empresa: 100, correo: 150, telefono: 20, mensaje: 1000 };
+
+  const sanitize = v => v.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#x27;').replace(/\//g,'&#x2F;');
+
+  const validateField = input => {
+    const val = input.value.trim();
+    const limit = LIMITS[input.name];
+    let invalid =
+      (input.required && !val) ||
+      (input.type === 'email' && val && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) ||
+      (limit && val.length > limit) ||
+      (val && INJECTION.test(val));
+    input.classList.toggle('error', !!invalid);
+    return !invalid;
+  };
+
+  Object.entries(LIMITS).forEach(([name, max]) => {
+    const el = form.querySelector(`[name="${name}"]`);
+    if (el) el.setAttribute('maxlength', max);
   });
 
-  /* ---- Tabs: make servicio cards keyboard accessible ---- */
-  document.querySelectorAll('.servicio-card').forEach(card => {
-    card.setAttribute('tabindex', '0');
+  form.querySelectorAll('input, textarea').forEach(field => {
+    field.addEventListener('blur', () => validateField(field));
+    field.addEventListener('input', () => { if (field.classList.contains('error')) validateField(field); });
   });
 
-  console.log('🎯 Publiser MX — Cargado correctamente');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    let valid = true;
+    form.querySelectorAll('input[required], textarea[required]').forEach(f => { if (!validateField(f)) valid = false; });
+    if (!valid) return;
+
+    const payload = {};
+    form.querySelectorAll('input, textarea, select').forEach(f => { if (f.name) payload[f.name] = sanitize(f.value.trim()); });
+
+    const btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.querySelector('span').textContent = 'Enviando...';
+
+    fetch('submit.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    })
+      .then(r => r.json())
+      .then(r => {
+        if (r.ok) {
+          form.querySelectorAll('input, textarea, select').forEach(f => (f.value = ''));
+          successMsg.classList.add('show');
+          setTimeout(() => successMsg.classList.remove('show'), 5000);
+        } else {
+          alert(r.errors ? r.errors.join('\n') : (r.error || 'Error al enviar. Intenta de nuevo.'));
+        }
+      })
+      .catch(() => alert('No se pudo conectar con el servidor. Intenta más tarde.'))
+      .finally(() => {
+        btn.disabled = false;
+        btn.querySelector('span').textContent = 'Enviar Consulta';
+      });
+  });
+
 })();
