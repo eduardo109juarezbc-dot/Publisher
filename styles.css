@@ -3160,6 +3160,48 @@ button {
 }
 
 /* =============================================================
+   PAGE-LEVEL GRID UTILITIES (sub-pages use these instead of inline styles)
+   ============================================================= */
+
+.pg-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.pg-grid-2c {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.pg-grid-2sm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.pg-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .pg-grid-2,
+  .pg-grid-2c,
+  .pg-grid-2sm,
+  .pg-grid-3 {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    text-align: left;
+  }
+}
+
+/* =============================================================
    MOBILE & iOS — RESPONSIVE POLISH
    ============================================================= */
 
