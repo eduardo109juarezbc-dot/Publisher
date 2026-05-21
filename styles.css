@@ -2293,9 +2293,13 @@ button {
     bottom: 0;
     background: rgba(5, 13, 26, 0.98);
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    gap: 12px;
+    gap: 8px;
+    padding-top: calc(env(safe-area-inset-top, 0px) + 76px);
+    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 24px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     backdrop-filter: blur(20px);
     z-index: 999;
   }
@@ -3173,9 +3177,8 @@ a, button, input, select, textarea, label {
   padding-top: max(8px, env(safe-area-inset-top, 0px));
 }
 
-/* Menú móvil: respeta el notch al abrirse */
+/* Menú móvil: evita que el scroll burbujee al body */
 .nav.open {
-  padding-top: env(safe-area-inset-top, 0px);
   overscroll-behavior: contain;
 }
 
