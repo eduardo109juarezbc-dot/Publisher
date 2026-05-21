@@ -960,10 +960,58 @@
               </svg>
             </div>
             <h3>Agenda una Demostración</h3>
-            <p>¿Prefieres vernos en acción? Agenda una reunión de 30 minutos y te mostraremos cómo monitorearíamos
-              tu
-              campaña.</p>
-            <a href="https://calendly.com" target="_blank" rel="noopener" class="btn btn--primary">Agendar Reunión</a>
+            <p>¿Prefieres vernos en acción? Elige fecha y hora y nos ponemos en contacto para confirmar tu reunión de 30 minutos.</p>
+            <form class="demo-booking-form" id="demoBookingForm" novalidate>
+              <div class="demo-booking-inputs">
+                <div class="form-row form-row--2">
+                  <div class="form-group">
+                    <label>Fecha</label>
+                    <div class="custom-datepicker" id="demoPicker">
+                      <button type="button" class="custom-datepicker__trigger" id="demoPickerToggle" aria-expanded="false" aria-haspopup="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                        <span class="dp-label" id="demoPickerLabel">Selecciona fecha</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                      </button>
+                      <div class="custom-datepicker__panel" id="demoPickerPanel" hidden>
+                        <div class="custom-datepicker__header">
+                          <button type="button" class="dp-nav-btn" id="demoPickerPrev"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+                          <span class="dp-month-year" id="demoPickerMonthYear"></span>
+                          <button type="button" class="dp-nav-btn" id="demoPickerNext"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+                        </div>
+                        <div class="custom-datepicker__weekdays">
+                          <span>Lu</span><span>Ma</span><span>Mi</span><span>Ju</span><span>Vi</span>
+                          <span class="dp-weekend">Sá</span><span class="dp-weekend">Do</span>
+                        </div>
+                        <div class="custom-datepicker__grid" id="demoPickerGrid"></div>
+                      </div>
+                      <input type="hidden" id="demoFecha" name="fecha" />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="demoHora">Hora</label>
+                    <select id="demoHora" name="hora" required>
+                      <option value="">Selecciona...</option>
+                      <option value="09:00">09:00 am</option>
+                      <option value="10:00">10:00 am</option>
+                      <option value="11:00">11:00 am</option>
+                      <option value="12:00">12:00 pm</option>
+                      <option value="14:00">02:00 pm</option>
+                      <option value="15:00">03:00 pm</option>
+                      <option value="16:00">04:00 pm</option>
+                      <option value="17:00">05:00 pm</option>
+                    </select>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn--primary btn--full" style="margin-top:14px;">
+                  <span>Solicitar Cita</span>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+              </div>
+              <div class="form-success" id="demoBookingSuccess">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <p>¡Tu solicitud fue enviada! Nos pondremos en contacto contigo pronto para confirmar tu cita.</p>
+              </div>
+            </form>
           </div>
 
           <div class="contacto__details">

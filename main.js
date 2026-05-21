@@ -129,6 +129,96 @@
   // Keyboard accessible service cards
   document.querySelectorAll('.servicio-card').forEach(card => card.setAttribute('tabindex', '0'));
 
+  // Demo booking form
+  const demoBookingForm = document.getElementById('demoBookingForm');
+  if (demoBookingForm) {
+
+    // Custom datepicker
+    const pickerEl = document.getElementById('demoPicker');
+    if (pickerEl) {
+      const todayDp = new Date();
+      todayDp.setHours(0, 0, 0, 0);
+      let viewDate = new Date(todayDp.getFullYear(), todayDp.getMonth(), 1);
+      let selectedDate = null;
+      const MONTHS_ES = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+
+      const dpToggle   = document.getElementById('demoPickerToggle');
+      const dpPanel    = document.getElementById('demoPickerPanel');
+      const dpLabel    = document.getElementById('demoPickerLabel');
+      const dpMonthYr  = document.getElementById('demoPickerMonthYear');
+      const dpGrid     = document.getElementById('demoPickerGrid');
+      const dpHidden   = document.getElementById('demoFecha');
+
+      function dpRender() {
+        const yr = viewDate.getFullYear(), mo = viewDate.getMonth();
+        dpMonthYr.textContent = `${MONTHS_ES[mo]} ${yr}`;
+        const firstDow = new Date(yr, mo, 1).getDay();
+        const offset = firstDow === 0 ? 6 : firstDow - 1;
+        const total = new Date(yr, mo + 1, 0).getDate();
+        dpGrid.innerHTML = '';
+        for (let i = 0; i < offset; i++) {
+          const s = document.createElement('span');
+          s.className = 'dp-cell dp-empty';
+          dpGrid.appendChild(s);
+        }
+        for (let d = 1; d <= total; d++) {
+          const date = new Date(yr, mo, d);
+          const dow = date.getDay();
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'dp-cell';
+          btn.textContent = d;
+          if (date < todayDp || dow === 0 || dow === 6) {
+            btn.disabled = true;
+            btn.classList.add('dp-disabled');
+          }
+          if (date.toDateString() === todayDp.toDateString()) btn.classList.add('dp-today');
+          if (selectedDate && date.toDateString() === selectedDate.toDateString()) btn.classList.add('dp-selected');
+          if (!btn.disabled) {
+            btn.addEventListener('click', () => {
+              selectedDate = date;
+              const mm = String(date.getMonth() + 1).padStart(2, '0');
+              const dd = String(date.getDate()).padStart(2, '0');
+              dpHidden.value = `${date.getFullYear()}-${mm}-${dd}`;
+              dpLabel.textContent = `${dd} ${MONTHS_ES[date.getMonth()].slice(0, 3)} ${date.getFullYear()}`;
+              dpLabel.classList.add('dp-has-value');
+              dpToggle.classList.remove('error');
+              dpClose();
+              dpRender();
+            });
+          }
+          dpGrid.appendChild(btn);
+        }
+      }
+
+      function dpOpen()  { dpPanel.hidden = false; dpToggle.setAttribute('aria-expanded', 'true');  dpRender(); }
+      function dpClose() { dpPanel.hidden = true;  dpToggle.setAttribute('aria-expanded', 'false'); }
+
+      dpToggle.addEventListener('click', e => { e.stopPropagation(); dpPanel.hidden ? dpOpen() : dpClose(); });
+      document.getElementById('demoPickerPrev').addEventListener('click', e => { e.stopPropagation(); viewDate.setMonth(viewDate.getMonth() - 1); dpRender(); });
+      document.getElementById('demoPickerNext').addEventListener('click', e => { e.stopPropagation(); viewDate.setMonth(viewDate.getMonth() + 1); dpRender(); });
+      document.addEventListener('click', e => { if (!e.target.closest('#demoPicker')) dpClose(); });
+    }
+
+    // Hour select error clear
+    const horaSelect = document.getElementById('demoHora');
+    if (horaSelect) horaSelect.addEventListener('change', () => horaSelect.classList.remove('error'));
+
+    // Submit
+    demoBookingForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const dpHidden = document.getElementById('demoFecha');
+      const dpToggle = document.getElementById('demoPickerToggle');
+      const hora = document.getElementById('demoHora');
+      let valid = true;
+      if (!dpHidden || !dpHidden.value) { if (dpToggle) dpToggle.classList.add('error'); valid = false; }
+      if (!hora.value) { hora.classList.add('error'); valid = false; }
+      if (!valid) return;
+      demoBookingForm.querySelector('.demo-booking-inputs').style.display = 'none';
+      document.getElementById('demoBookingSuccess').classList.add('show');
+    });
+  }
+
   // Contact form
   const form = document.getElementById('contactForm');
   const successMsg = document.getElementById('formSuccess');
