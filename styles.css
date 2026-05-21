@@ -3154,3 +3154,169 @@ button {
   color: #00b4a6;
   border: 1px solid rgba(0, 180, 166, 0.2);
 }
+
+/* =============================================================
+   MOBILE & iOS — RESPONSIVE POLISH
+   ============================================================= */
+
+/* Elimina el destello azul al tocar en iOS / Android */
+a, button, input, select, textarea, label {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Safe area para notch / Dynamic Island del iPhone */
+.header {
+  padding-top: max(10px, env(safe-area-inset-top, 0px));
+}
+
+.header.scrolled {
+  padding-top: max(8px, env(safe-area-inset-top, 0px));
+}
+
+/* Menú móvil: respeta el notch al abrirse */
+.nav.open {
+  padding-top: env(safe-area-inset-top, 0px);
+  overscroll-behavior: contain;
+}
+
+/* Hero: usa dvh para que no quede corto cuando la barra de Safari se oculta */
+.hero {
+  min-height: 100dvh;
+}
+
+/* FAB de WhatsApp por encima del home indicator del iPhone */
+.whatsapp-fab {
+  bottom: calc(28px + env(safe-area-inset-bottom, 0px));
+  right: calc(28px + env(safe-area-inset-right, 0px));
+}
+
+/* ---- ≤ 768px ---- */
+@media (max-width: 768px) {
+  /* Logo más pequeño en header */
+  .logo__img {
+    height: 48px;
+  }
+
+  /* Hero */
+  .hero__content {
+    padding-top: 88px;
+    padding-bottom: 48px;
+  }
+
+  .hero__badge {
+    font-size: 0.75rem;
+    padding: 6px 14px;
+  }
+
+  .hero__subtitle {
+    font-size: 0.95rem;
+  }
+
+  .hero__cta .btn--lg {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Oculta divisores de stats cuando son una fila */
+  .hero__stat-divider {
+    display: none;
+  }
+
+  .hero__stats {
+    gap: 16px;
+  }
+
+  /* Secciones */
+  .section__header {
+    margin-bottom: 40px;
+  }
+
+  /* Demo booking card */
+  .contacto__demo-card {
+    padding: 24px 20px;
+  }
+}
+
+/* ---- ≤ 480px (iPhone SE, Android compactos) ---- */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .section {
+    padding: 56px 0;
+  }
+
+  .section__header {
+    margin-bottom: 28px;
+  }
+
+  /* Logo aún más compacto */
+  .logo__img {
+    height: 40px;
+  }
+
+  /* Hero: título más legible en pantalla estrecha */
+  .hero__title {
+    font-size: 1.85rem;
+    line-height: 1.18;
+  }
+
+  .hero__subtitle {
+    font-size: 0.88rem;
+    margin-bottom: 28px;
+  }
+
+  .hero__cta {
+    gap: 10px;
+    margin-bottom: 36px;
+  }
+
+  .hero__stats {
+    gap: 14px;
+  }
+
+  .hero__stat-number {
+    font-size: 1.5rem;
+  }
+
+  /* Valores banner */
+  .valores-banner {
+    padding: 24px 16px;
+  }
+
+  /* Beneficio card: número grande más compacto */
+  .beneficio-card__number {
+    font-size: 2.5rem;
+  }
+
+  /* Contacto demo card */
+  .contacto__demo-card {
+    padding: 20px 16px;
+  }
+
+  /* Chips de alcaldías / municipios */
+  .chip {
+    font-size: 0.68rem;
+    padding: 3px 8px;
+  }
+
+  /* Blog / article */
+  .article-card__header,
+  .article-card__body {
+    padding: 20px 16px;
+  }
+
+  /* Footer */
+  .footer {
+    padding-top: 48px;
+  }
+
+  /* FAB más pequeño y bien separado del borde */
+  .whatsapp-fab {
+    width: 50px;
+    height: 50px;
+    bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+    right: 16px;
+  }
+}
