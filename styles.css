@@ -2295,8 +2295,8 @@ button {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 8px;
-    padding-top: calc(env(safe-area-inset-top, 0px) + 76px);
+    gap: 4px;
+    padding-top: calc(env(safe-area-inset-top, 0px) + 72px);
     padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 24px);
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
@@ -3168,11 +3168,10 @@ a, button, input, select, textarea, label {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Safe area para notch / Dynamic Island del iPhone */
+/* Safe area para notch / Dynamic Island */
 .header {
   padding-top: max(10px, env(safe-area-inset-top, 0px));
 }
-
 .header.scrolled {
   padding-top: max(8px, env(safe-area-inset-top, 0px));
 }
@@ -3182,12 +3181,12 @@ a, button, input, select, textarea, label {
   overscroll-behavior: contain;
 }
 
-/* Hero: usa dvh para que no quede corto cuando la barra de Safari se oculta */
+/* Hero: dvh para iOS Safari */
 .hero {
   min-height: 100dvh;
 }
 
-/* FAB de WhatsApp por encima del home indicator del iPhone */
+/* FAB sobre el home indicator */
 .whatsapp-fab {
   bottom: calc(28px + env(safe-area-inset-bottom, 0px));
   right: calc(28px + env(safe-area-inset-right, 0px));
@@ -3195,131 +3194,251 @@ a, button, input, select, textarea, label {
 
 /* ---- ≤ 768px ---- */
 @media (max-width: 768px) {
-  /* Logo más pequeño en header */
-  .logo__img {
-    height: 48px;
+
+  /* --- NAV MÓVIL --- */
+  .nav__link {
+    font-size: 1rem;
+    padding: 11px 20px;
+  }
+  .nav__dropdown-trigger {
+    font-size: 1rem;
+    padding: 11px 20px;
+  }
+  .nav__dropdown-item {
+    font-size: 0.875rem;
+    padding: 8px 16px;
+  }
+  .nav .btn--nav {
+    font-size: 0.9rem;
+    padding: 10px 24px;
+    margin-top: 4px;
   }
 
-  /* Hero */
+  /* --- LOGO --- */
+  .logo__img {
+    height: 44px;
+  }
+
+  /* --- HERO --- */
   .hero__content {
     padding-top: 88px;
     padding-bottom: 48px;
   }
-
   .hero__badge {
-    font-size: 0.75rem;
-    padding: 6px 14px;
+    font-size: 0.72rem;
+    padding: 5px 12px;
   }
-
   .hero__subtitle {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
   }
-
   .hero__cta .btn--lg {
     width: 100%;
     justify-content: center;
   }
-
-  /* Oculta divisores de stats cuando son una fila */
   .hero__stat-divider {
     display: none;
   }
-
   .hero__stats {
     gap: 16px;
   }
 
-  /* Secciones */
+  /* --- SECCIONES --- */
   .section__header {
     margin-bottom: 40px;
   }
+  .section__title {
+    word-break: break-word;
+  }
 
-  /* Demo booking card */
+  /* --- SERVICIOS --- */
+  .servicio-card {
+    padding: 24px 20px;
+  }
+
+  /* --- BENEFICIO CARDS --- */
+  .beneficio-card {
+    padding: 24px 20px;
+  }
+
+  /* --- COMPARATIVA --- */
+  .comparativa {
+    padding: 24px 16px;
+  }
+
+  /* --- CONTACTO DEMO CARD --- */
   .contacto__demo-card {
     padding: 24px 20px;
   }
 }
 
-/* ---- ≤ 480px (iPhone SE, Android compactos) ---- */
+/* ---- ≤ 480px (iPhone 14 Pro / Android estándar) ---- */
 @media (max-width: 480px) {
+
+  /* --- BASE --- */
   .container {
     padding: 0 16px;
   }
-
   .section {
-    padding: 56px 0;
+    padding: 52px 0;
   }
-
   .section__header {
     margin-bottom: 28px;
   }
-
-  /* Logo aún más compacto */
-  .logo__img {
-    height: 40px;
+  .section__title {
+    font-size: clamp(1.45rem, 5.5vw, 1.9rem);
+    word-break: break-word;
+  }
+  .section__subtitle {
+    font-size: 0.875rem;
   }
 
-  /* Hero: título más legible en pantalla estrecha */
+  /* --- LOGO --- */
+  .logo__img {
+    height: 38px;
+  }
+
+  /* --- HERO --- */
+  .hero__content {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
   .hero__title {
-    font-size: 1.85rem;
+    font-size: 1.7rem;
     line-height: 1.18;
   }
-
   .hero__subtitle {
-    font-size: 0.88rem;
-    margin-bottom: 28px;
+    font-size: 0.85rem;
+    margin-bottom: 24px;
   }
-
   .hero__cta {
     gap: 10px;
+    margin-bottom: 32px;
+  }
+  .hero__stats {
+    gap: 20px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .hero__stat-number {
+    font-size: 1.4rem;
+  }
+  .hero__stat-label {
+    font-size: 0.7rem;
+  }
+
+  /* --- QUIÉNES SOMOS --- */
+  .quienes__intro-text {
+    font-size: 0.9rem;
+  }
+  .quienes__intro {
     margin-bottom: 36px;
   }
 
-  .hero__stats {
-    gap: 14px;
-  }
-
-  .hero__stat-number {
-    font-size: 1.5rem;
-  }
-
-  /* Valores banner */
+  /* --- VALORES BANNER --- */
   .valores-banner {
     padding: 24px 16px;
+    margin-top: 36px;
+  }
+  .valores-banner__col {
+    padding: 0 8px;
+  }
+  .valores-banner__col h4 {
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+  }
+  .valores-banner__col p {
+    font-size: 0.8rem;
+  }
+  .valores-banner__icon {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
   }
 
-  /* Beneficio card: número grande más compacto */
-  .beneficio-card__number {
-    font-size: 2.5rem;
-  }
-
-  /* Contacto demo card */
-  .contacto__demo-card {
+  /* --- SERVICIOS --- */
+  .servicio-card {
     padding: 20px 16px;
   }
+  .servicio-card__title {
+    font-size: 1.05rem;
+  }
+  .servicio-card__img-real {
+    height: 150px;
+  }
 
-  /* Chips de alcaldías / municipios */
+  /* --- BENEFICIO CARDS --- */
+  .beneficio-card {
+    padding: 20px 16px;
+  }
+  .beneficio-card__number {
+    font-size: 2rem;
+  }
+  .beneficio-card h3 {
+    font-size: 1.05rem;
+  }
+
+  /* --- COBERTURA --- */
+  .cobertura__map-svg-wrap {
+    height: 240px !important;
+    padding: 16px 12px 12px;
+  }
+  .cobertura__stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .cobertura__stat-card {
+    padding: 14px 12px;
+    gap: 10px;
+  }
+  .cobertura__stat-num {
+    font-size: 1.25rem;
+  }
+
+  /* --- COMPARATIVA --- */
+  .comparativa {
+    padding: 18px 12px;
+  }
+  .comparativa__title {
+    font-size: 1.05rem;
+    margin-bottom: 14px;
+  }
+  .tabla-comparativa {
+    font-size: 0.72rem;
+  }
+  .tabla-comparativa th,
+  .tabla-comparativa td {
+    padding: 8px 7px;
+  }
+
+  /* --- CONTACTO DEMO CARD --- */
+  .contacto__demo-card {
+    padding: 18px 14px;
+  }
+
+  /* --- CHIPS --- */
   .chip {
     font-size: 0.68rem;
     padding: 3px 8px;
   }
 
-  /* Blog / article */
+  /* --- BLOG --- */
   .article-card__header,
   .article-card__body {
-    padding: 20px 16px;
+    padding: 18px 14px;
   }
 
-  /* Footer */
+  /* --- FOOTER --- */
   .footer {
-    padding-top: 48px;
+    padding-top: 44px;
+  }
+  .footer__bottom-inner {
+    gap: 6px;
   }
 
-  /* FAB más pequeño y bien separado del borde */
+  /* --- FAB --- */
   .whatsapp-fab {
     width: 50px;
     height: 50px;
     bottom: calc(20px + env(safe-area-inset-bottom, 0px));
-    right: 16px;
+    right: 14px;
   }
 }
