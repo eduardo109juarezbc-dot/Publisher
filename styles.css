@@ -879,7 +879,9 @@ button {
 
 .check {
   color: var(--teal-500);
-  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
 }
 
 /* ---- CASOS DE ÉXITO ---- */
@@ -978,7 +980,9 @@ button {
 
 .testimonial-card__stars {
   color: #f0a500;
-  font-size: 1rem;
+  display: flex;
+  gap: 2px;
+  align-items: center;
   margin-bottom: 16px;
   letter-spacing: 2px;
 }
