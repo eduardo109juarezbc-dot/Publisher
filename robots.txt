@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /submit.php
+Disallow: /config.php
+
+Sitemap: https://publisermx.com/sitemap.xml
